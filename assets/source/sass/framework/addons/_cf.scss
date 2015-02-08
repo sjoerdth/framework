@@ -1,0 +1,13 @@
+/***
+    CLEAR FIX
+
+    Clear floats for parent element
+***/
+.cf
+{
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

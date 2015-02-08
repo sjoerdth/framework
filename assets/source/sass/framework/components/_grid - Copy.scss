@@ -1,0 +1,137 @@
+// clearfix
+@if $-fw-use-grid == true {
+    .grid {
+        margin: 0 auto;
+        @extend .cf;
+    }
+
+    .grid__cell {
+        float: left;
+        padding: $-fw-baseline / 2;
+    }
+}
+
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+/**
+ * Sizes in human readable format. These are used in conjunction with other
+ * objects and abstractions found in inuit.css, most commonly the grid system
+ * and faux flexbox.
+ *
+ * We have a mixin to generate our widths and their breakpoint-specific
+ * variations.
+ */
+
+@mixin grid-setup($namespace: "") {
+    /**
+    * Whole
+    */
+    .#{$namespace}one-of-one         { width:100%; }
+
+
+    /**
+    * Halves
+    */
+    .#{$namespace}one-of-two          { width:50%; }
+
+
+    /**
+    * Thirds
+    */
+    .#{$namespace}one-of-three         { width:33.333%; }
+    .#{$namespace}two-of-three        { width:66.666%; }
+
+
+    /**
+    * Quarters
+    */
+    .#{$namespace}one-of-four       { width:25%; }
+    .#{$namespace}two-of-four      { @extend .#{$namespace}one-of-two; }
+    .#{$namespace}three-of-four    { width:75%; }
+
+
+    /**
+    * Fifths
+    */
+    .#{$namespace}one-of-five         { width:20%; }
+    .#{$namespace}two-of-five        { width:40%; }
+    .#{$namespace}three-of-five      { width:60%; }
+    .#{$namespace}four-of-five       { width:80%; }
+
+
+    /**
+    * Sixths
+    */
+    .#{$namespace}one-of-six         { width:16.666%; }
+    .#{$namespace}two-of-six        { @extend .#{$namespace}one-of-three; }
+    .#{$namespace}three-of-six      { @extend .#{$namespace}one-of-two; }
+    .#{$namespace}four-of-six       { @extend .#{$namespace}two-of-three; }
+    .#{$namespace}five-of-six       { width:83.333%; }
+
+
+    /**
+    * Eighths
+    */
+    .#{$namespace}one-of-eight        { width:12.5%; }
+    .#{$namespace}two-of-eight       { @extend .#{$namespace}one-of-four; }
+    .#{$namespace}three-of-eight     { width:37.5%; }
+    .#{$namespace}four-of-eight      { @extend .#{$namespace}one-of-two; }
+    .#{$namespace}five-of-eight      { width:62.5%; }
+    .#{$namespace}six-of-eight       { @extend .#{$namespace}three-of-four; }
+    .#{$namespace}seven-of-eight     { width:87.5%; }
+
+
+    /**
+    * Tenths
+    */
+    .#{$namespace}one-of-ten         { width:10%; }
+    .#{$namespace}two-of-ten        { @extend .#{$namespace}one-of-five; }
+    .#{$namespace}three-of-ten      { width:30%; }
+    .#{$namespace}four-of-ten       { @extend .#{$namespace}two-of-five; }
+    .#{$namespace}five-of-ten       { @extend .#{$namespace}one-of-two; }
+    .#{$namespace}six-of-ten        { @extend .#{$namespace}three-of-five; }
+    .#{$namespace}seven-of-ten      { width:70%; }
+    .#{$namespace}eight-of-ten      { @extend .#{$namespace}four-of-five; }
+    .#{$namespace}nine-of-ten       { width:90%; }
+
+
+    /**
+    * Twelfths
+    */
+    .#{$namespace}one-of-twelve       { width:8.333%; }
+    .#{$namespace}two-of-twelve      { @extend .#{$namespace}one-of-six; }
+    .#{$namespace}three-of-twelve    { @extend .#{$namespace}one-of-four; }
+    .#{$namespace}four-of-twelve     { @extend .#{$namespace}one-of-three; }
+    .#{$namespace}five-of-twelve     { width:41.666% }
+    .#{$namespace}six-of-twelve      { @extend .#{$namespace}one-of-two; }
+    .#{$namespace}seven-of-twelve    { width:58.333%; }
+    .#{$namespace}eight-of-twelve    { @extend .#{$namespace}two-of-three; }
+    .#{$namespace}nine-of-twelve     { @extend .#{$namespace}three-of-four; }
+    .#{$namespace}ten-of-twelve      { @extend .#{$namespace}five-of-six; }
+    .#{$namespace}eleven-of-twelve   { width:91.666%; }
+}
+
+@include grid-setup();
+/*
+$screen-sizes: small, medium, large;
+
+@each $i in $screen-sizes {
+    @include grid-setup("#{$i}-");
+}
+*/
+
+$grid-start: 1;
+$grid-end: 12;
+/*
+@for $i from $grid-start through $grid-end {
+  .size-#{$i} {
+    width: (100 / $i) * 1%;
+  }
+}
+*/
+@for $g from $grid-start through $grid-end {
+    .bit-#{$g} {
+        width: 100 / $i;
+    }
+}

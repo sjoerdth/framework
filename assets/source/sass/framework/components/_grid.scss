@@ -1,0 +1,15 @@
+// clearfix
+.grid {
+    margin: 0 auto;
+    //max-width: $frame-width;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.grid__cell {
+    float: left;
+    padding: $-fw-baseline / 2;
+}

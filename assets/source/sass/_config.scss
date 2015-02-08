@@ -1,0 +1,48 @@
+/***
+
+    Uncomment and change value to overwrite default values
+
+***/
+
+/***
+    BASELINE
+    Documentation & default values -> addon/baseline
+***/
+
+/* Set default (body copy) font-size */
+//$-fw-fontsize: 1;
+
+/* Set default baseline for vertical rhythm */
+//$-fw-lineheight: 2;
+
+/* Show baseline grid */
+$-fw-show-baseline-grid: true;
+
+/***
+    TYPOGRAPHY
+    Documentation & default values -> addon/typography
+***/
+
+/* #todo.1 ->   Given values are unknown at this moment, not set until
+                typography import. Overwrite should be a number for now.
+
+    Set eponential growth of <h1> through <h6> and .h1 through .h6, when you
+    increase this value line-height for these elements should possibly also be
+    increased and vice versa.
+
+    Values:
+    $-fw-minor-second: 1.067;
+    $-fw-major-second: 1.125;
+    $-fw-minor-third: 1.2;
+    $-fw-major-third: 1.25;
+    $-fw-perfect-fourth: 1.333;
+    $-fw-augmented-fourth: 1.414;
+    $-fw-perfect-fifth: 1.5;
+    $-fw-golden-ratio: 1.618;
+*/
+//$-fw-ratio: $-fw-minor-third; #todo.2 -> doesn't work, see #todo.1
+//$-fw-ratio: 1.125;
+
+/*  Set max and min number of headers to be used in project (h1 through h6) */
+//$-fw-h-type--min: 1;
+//$-fw-h-type--max: 6;

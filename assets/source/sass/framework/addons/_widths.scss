@@ -1,0 +1,6 @@
+// Create widths (1-12)
+@for $i from 1 through 12 {
+    .bit-#{$i}, .large-bit-#{$i}, .medium-bit-#{$i}, .small-bit-#{$i} {
+        width: (100 / $i) * 1%;
+    }
+}

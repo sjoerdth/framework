@@ -1,0 +1,639 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/**
+ * FROM INUIT CSS
+ * Create vendor-prefixed CSS in one go, e.g.
+ *
+   `@include vendor(border-radius, 4px);`
+ *
+ */
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/**
+ * BASE FROM INUIT CSS
+ * A more considered reset; more of a restart...
+ * As per: csswizardry.com/2011/10/reset-restarted
+ */
+/**
+* LetΓÇÖs make the box model all nice, shall we...?
+*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/**
+ * The usual...
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+abbr[title], dfn[title] {
+  cursor: help; }
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+u, ins {
+  text-decoration: none; }
+
+/**
+ * Apply faux underline via `border-bottom`.
+ */
+ins {
+  border-bottom: 1px solid; }
+
+/**
+ * So that `alt` text is visually offset if images donΓÇÖt load.
+ */
+img {
+  font-style: italic; }
+
+/**
+ * Give form elements some cursor interactions...
+ */
+label,
+input,
+textarea,
+button,
+select,
+option {
+  cursor: pointer; }
+
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none; }
+
+/***
+
+    Uncomment and change value to overwrite default values
+
+***/
+/***
+    BASELINE
+    Documentation & default values -> addon/baseline
+***/
+/* Set default (body copy) font-size */
+/* Set default baseline for vertical rhythm */
+/* Show baseline grid */
+/***
+    TYPOGRAPHY
+    Documentation & default values -> addon/typography
+***/
+/* #todo.1 ->   Given values are unknown at this moment, not set until
+                typography import. Overwrite should be a number for now.
+
+    Set eponential growth of <h1> through <h6> and .h1 through .h6, when you
+    increase this value line-height for these elements should possibly also be
+    increased and vice versa.
+
+    Values:
+    $-fw-minor-second: 1.067;
+    $-fw-major-second: 1.125;
+    $-fw-minor-third: 1.2;
+    $-fw-major-third: 1.25;
+    $-fw-perfect-fourth: 1.333;
+    $-fw-augmented-fourth: 1.414;
+    $-fw-perfect-fifth: 1.5;
+    $-fw-golden-ratio: 1.618;
+*/
+/*  Set max and min number of headers to be used in project (h1 through h6) */
+.bit-1, .large-bit-1, .medium-bit-1, .small-bit-1 {
+  width: 100%; }
+
+.bit-2, .large-bit-2, .medium-bit-2, .small-bit-2 {
+  width: 50%; }
+
+.bit-3, .large-bit-3, .medium-bit-3, .small-bit-3 {
+  width: 33.33333%; }
+
+.bit-4, .large-bit-4, .medium-bit-4, .small-bit-4 {
+  width: 25%; }
+
+.bit-5, .large-bit-5, .medium-bit-5, .small-bit-5 {
+  width: 20%; }
+
+.bit-6, .large-bit-6, .medium-bit-6, .small-bit-6 {
+  width: 16.66667%; }
+
+.bit-7, .large-bit-7, .medium-bit-7, .small-bit-7 {
+  width: 14.28571%; }
+
+.bit-8, .large-bit-8, .medium-bit-8, .small-bit-8 {
+  width: 12.5%; }
+
+.bit-9, .large-bit-9, .medium-bit-9, .small-bit-9 {
+  width: 11.11111%; }
+
+.bit-10, .large-bit-10, .medium-bit-10, .small-bit-10 {
+  width: 10%; }
+
+.bit-11, .large-bit-11, .medium-bit-11, .small-bit-11 {
+  width: 9.09091%; }
+
+.bit-12, .large-bit-12, .medium-bit-12, .small-bit-12 {
+  width: 8.33333%; }
+
+/***
+
+    Setup baseline and spacing units for vertical & horizontal rhythm
+    For h1 through h6 (and other textelements) you can use
+    $-fw-fontsize * x.5 $-fw-baseline, if rounded values are too big or small.
+    EG:
+    h2 {
+        line-height: $-fw-baseline * 2.5;
+    }
+
+***/
+/************
+
+BASELINEGRID
+
+    Include in HTML after <body> of before </body>.
+    Repeat <div class="baselinegrid__line"></div> until screen is filled
+    <div class="baselinegrid">
+        <div class="baselinegrid__line"></div>
+    </div>
+
+************/
+.baselinegrid {
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden; }
+
+.baselinegrid__line {
+  height: 0.7rem; }
+  .baselinegrid__line:nth-child(even) {
+    border-bottom: 1px solid rgba(0, 0, 255, 0.25); }
+  .baselinegrid__line:nth-child(odd) {
+    border-bottom: 1px dotted rgba(0, 0, 255, 0.25); }
+
+/*
+    Type scales ratios.
+
+    This determines the exponential growth of the font-size as seen on
+    http://type-scale.com/
+*/
+/*  Set default ratio used throughout project */
+/*
+    Calculate header sizes and create classes similair to header tags.
+    EG
+    <h1> -> .h1
+*/
+/*  Set max and min number of headers to be used in project (h1 through h6) */
+/*  Calculate header font-size using $-fw-fontsize & $-fw-ratio,
+    also set default margin-bottom of al headers to $-fw-baseline (because it's
+    easy) */
+h6, .h6 {
+  font-size: 1.25rem;
+  margin-bottom: 1.4rem; }
+
+h5, .h5 {
+  font-size: 1.5625rem;
+  margin-bottom: 1.4rem; }
+
+h4, .h4 {
+  font-size: 1.95313rem;
+  margin-bottom: 1.4rem; }
+
+h3, .h3 {
+  font-size: 2.44141rem;
+  margin-bottom: 1.4rem; }
+
+h2, .h2 {
+  font-size: 3.05176rem;
+  margin-bottom: 1.4rem; }
+
+h1, .h1 {
+  font-size: 3.8147rem;
+  margin-bottom: 1.4rem; }
+
+p {
+  margin-bottom: 1.4rem; }
+  p:last-child {
+    margin-bottom: 0; }
+
+.grid {
+  margin: 0 auto; }
+  .grid:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.grid__cell {
+  float: left;
+  padding: 0.7rem; }
+
+body {
+  padding: 1.4rem;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  background: pink; }
+
+.wrapper {
+  width: 50%;
+  padding: 1.4rem;
+  margin-right: auto;
+  margin-bottom: 1.4rem;
+  margin-left: auto;
+  background: white; }
+
+h1, .h1 {
+  line-height: 5.6rem; }
+
+h2, .h2 {
+  line-height: 4.2rem; }
+
+h3, .h3 {
+  line-height: 4.2rem; }
+
+h4, .h4 {
+  line-height: 2.8rem; }
+
+h5, .h5 {
+  line-height: 2.8rem; }
+
+h6, .h6 {
+  line-height: 2.8rem; }
+
+.test-box {
+  padding: 1.4rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  background: yellow; }

@@ -1,15 +1,12 @@
 // clearfix
-.grid {
-    margin: 0 auto;
-    //max-width: $frame-width;
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
+@if $-fw-use-grid == true {
+    .grid {
+        margin: 0 auto;
+        @extend .cf;
     }
-}
 
-.grid__cell {
-    float: left;
-    padding: $-fw-baseline / 2;
+    .grid__cell {
+        float: left;
+        padding: $-fw-baseline / 2;
+    }
 }

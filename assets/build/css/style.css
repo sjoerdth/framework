@@ -1,4 +1,52 @@
 @charset "UTF-8";
+/*------------------------------------*\
+    DEFAULTS
+\*------------------------------------*/
+/**
+ * Default variables. Redefine these in your `_config.scss` file to override them.
+ */
+/***
+    BASELINE
+
+    Setup baseline and spacing units for vertical & horizontal rhythm.
+    For h1 through h6 (and other textelements) you can use
+    $-fw-fontsize * x.5 $-fw-baseline, if rounded values are too big or small.
+    EG:
+    h2 {
+        line-height: $-fw-baseline * 2.5;
+    }
+
+***/
+/*
+    Set default font-size
+*/
+/*
+    Set default line-height
+*/
+/*
+    Calculate baseline (= spacing unit for margins and paddings) from default
+    font-size and default line-height
+*/
+/***
+    TYPE
+***/
+/*
+    TYPE SCALE
+
+    This determines the exponential growth of the font-size as seen on
+    http://type-scale.com/
+*/
+/*
+    Set default ratio used throughout project
+*/
+/*  Set max and min number of headers to be used in project (h1 through h6) */
+/***
+    GRID
+***/
+/*  Set default number of columns used in grid */
+/***
+    COMPONENTS
+***/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -443,19 +491,15 @@ textarea:focus {
 ***/
 /***
     BASELINE
-    Documentation & default values -> addon/baseline
+    Documentation -> addon/baseline
 ***/
 /* Set default (body copy) font-size */
 /* Set default baseline for vertical rhythm */
-/* Show baseline grid */
 /***
-    TYPOGRAPHY
-    Documentation & default values -> addon/typography
-***/
-/* #todo.1 ->   Given values are unknown at this moment, not set until
-                typography import. Overwrite should be a number for now.
+    TYPE SCALE
+    Documentation -> addon/typography
 
-    Set eponential growth of <h1> through <h6> and .h1 through .h6, when you
+    Set exponential growth of <h1> & .h1 through <h6> & .h6, when you
     increase this value line-height for these elements should possibly also be
     increased and vice versa.
 
@@ -468,95 +512,1033 @@ textarea:focus {
     $-fw-augmented-fourth: 1.414;
     $-fw-perfect-fifth: 1.5;
     $-fw-golden-ratio: 1.618;
-*/
+***/
 /*  Set max and min number of headers to be used in project (h1 through h6) */
-.bit-1, .large-bit-1, .medium-bit-1, .small-bit-1 {
+/***
+    GRID
+    Documentation -> components/grid
+***/
+/*  Set number of columns used in grid, smaller $grid-end = less lines of css.
+    $grid-start should remain 1 in most cases. */
+/***
+    COMPONENTS
+***/
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+/**
+ *
+ */
+.col-1-of-1 {
   width: 100%; }
 
-.bit-2, .large-bit-2, .medium-bit-2, .small-bit-2 {
+.col-1-of-2 {
   width: 50%; }
 
-.bit-3, .large-bit-3, .medium-bit-3, .small-bit-3 {
+.col-1-of-3 {
   width: 33.33333%; }
 
-.bit-4, .large-bit-4, .medium-bit-4, .small-bit-4 {
+.col-2-of-3 {
+  width: 66.66667%; }
+
+.col-1-of-4 {
   width: 25%; }
 
-.bit-5, .large-bit-5, .medium-bit-5, .small-bit-5 {
+.col-2-of-4 {
+  width: 50%; }
+
+.col-3-of-4 {
+  width: 75%; }
+
+.col-1-of-5 {
   width: 20%; }
 
-.bit-6, .large-bit-6, .medium-bit-6, .small-bit-6 {
+.col-2-of-5 {
+  width: 40%; }
+
+.col-3-of-5 {
+  width: 60%; }
+
+.col-4-of-5 {
+  width: 80%; }
+
+.col-1-of-6 {
   width: 16.66667%; }
 
-.bit-7, .large-bit-7, .medium-bit-7, .small-bit-7 {
+.col-2-of-6 {
+  width: 33.33333%; }
+
+.col-3-of-6 {
+  width: 50%; }
+
+.col-4-of-6 {
+  width: 66.66667%; }
+
+.col-5-of-6 {
+  width: 83.33333%; }
+
+.col-1-of-7 {
   width: 14.28571%; }
 
-.bit-8, .large-bit-8, .medium-bit-8, .small-bit-8 {
+.col-2-of-7 {
+  width: 28.57143%; }
+
+.col-3-of-7 {
+  width: 42.85714%; }
+
+.col-4-of-7 {
+  width: 57.14286%; }
+
+.col-5-of-7 {
+  width: 71.42857%; }
+
+.col-6-of-7 {
+  width: 85.71429%; }
+
+.col-1-of-8 {
   width: 12.5%; }
 
-.bit-9, .large-bit-9, .medium-bit-9, .small-bit-9 {
+.col-2-of-8 {
+  width: 25%; }
+
+.col-3-of-8 {
+  width: 37.5%; }
+
+.col-4-of-8 {
+  width: 50%; }
+
+.col-5-of-8 {
+  width: 62.5%; }
+
+.col-6-of-8 {
+  width: 75%; }
+
+.col-7-of-8 {
+  width: 87.5%; }
+
+.col-1-of-9 {
   width: 11.11111%; }
 
-.bit-10, .large-bit-10, .medium-bit-10, .small-bit-10 {
+.col-2-of-9 {
+  width: 22.22222%; }
+
+.col-3-of-9 {
+  width: 33.33333%; }
+
+.col-4-of-9 {
+  width: 44.44444%; }
+
+.col-5-of-9 {
+  width: 55.55556%; }
+
+.col-6-of-9 {
+  width: 66.66667%; }
+
+.col-7-of-9 {
+  width: 77.77778%; }
+
+.col-8-of-9 {
+  width: 88.88889%; }
+
+.col-1-of-10 {
   width: 10%; }
 
-.bit-11, .large-bit-11, .medium-bit-11, .small-bit-11 {
+.col-2-of-10 {
+  width: 20%; }
+
+.col-3-of-10 {
+  width: 30%; }
+
+.col-4-of-10 {
+  width: 40%; }
+
+.col-5-of-10 {
+  width: 50%; }
+
+.col-6-of-10 {
+  width: 60%; }
+
+.col-7-of-10 {
+  width: 70%; }
+
+.col-8-of-10 {
+  width: 80%; }
+
+.col-9-of-10 {
+  width: 90%; }
+
+.col-1-of-11 {
   width: 9.09091%; }
 
-.bit-12, .large-bit-12, .medium-bit-12, .small-bit-12 {
+.col-2-of-11 {
+  width: 18.18182%; }
+
+.col-3-of-11 {
+  width: 27.27273%; }
+
+.col-4-of-11 {
+  width: 36.36364%; }
+
+.col-5-of-11 {
+  width: 45.45455%; }
+
+.col-6-of-11 {
+  width: 54.54545%; }
+
+.col-7-of-11 {
+  width: 63.63636%; }
+
+.col-8-of-11 {
+  width: 72.72727%; }
+
+.col-9-of-11 {
+  width: 81.81818%; }
+
+.col-10-of-11 {
+  width: 90.90909%; }
+
+.col-1-of-12 {
   width: 8.33333%; }
 
-/***
+.col-2-of-12 {
+  width: 16.66667%; }
 
-    Setup baseline and spacing units for vertical & horizontal rhythm
-    For h1 through h6 (and other textelements) you can use
-    $-fw-fontsize * x.5 $-fw-baseline, if rounded values are too big or small.
-    EG:
-    h2 {
-        line-height: $-fw-baseline * 2.5;
-    }
+.col-3-of-12 {
+  width: 25%; }
 
-***/
-/************
+.col-4-of-12 {
+  width: 33.33333%; }
 
-BASELINEGRID
+.col-5-of-12 {
+  width: 41.66667%; }
 
-    Include in HTML after <body> of before </body>.
-    Repeat <div class="baselinegrid__line"></div> until screen is filled
-    <div class="baselinegrid">
-        <div class="baselinegrid__line"></div>
-    </div>
+.col-6-of-12 {
+  width: 50%; }
 
-************/
-.baselinegrid {
-  position: fixed;
-  z-index: 100000;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  overflow: hidden; }
+.col-7-of-12 {
+  width: 58.33333%; }
 
-.baselinegrid__line {
-  height: 0.7rem; }
-  .baselinegrid__line:nth-child(even) {
-    border-bottom: 1px solid rgba(0, 0, 255, 0.25); }
-  .baselinegrid__line:nth-child(odd) {
-    border-bottom: 1px dotted rgba(0, 0, 255, 0.25); }
+.col-8-of-12 {
+  width: 66.66667%; }
 
-/*
-    Type scales ratios.
+.col-9-of-12 {
+  width: 75%; }
 
-    This determines the exponential growth of the font-size as seen on
-    http://type-scale.com/
-*/
-/*  Set default ratio used throughout project */
+.col-10-of-12 {
+  width: 83.33333%; }
+
+.col-11-of-12 {
+  width: 91.66667%; }
+
+@media (max-width: 30em) {
+  .small-col-1-of-1 {
+    width: 100%; } }
+
+@media (max-width: 30em) {
+  .small-col-1-of-2 {
+    width: 50%; } }
+
+@media (max-width: 30em) {
+  .small-col-1-of-3 {
+    width: 33.33333%; } }
+
+@media (max-width: 30em) {
+  .small-col-2-of-3 {
+    width: 66.66667%; } }
+
+@media (max-width: 30em) {
+  .small-col-1-of-4 {
+    width: 25%; } }
+
+@media (max-width: 30em) {
+  .small-col-2-of-4 {
+    width: 50%; } }
+
+@media (max-width: 30em) {
+  .small-col-3-of-4 {
+    width: 75%; } }
+
+@media (max-width: 30em) {
+  .small-col-1-of-5 {
+    width: 20%; } }
+
+@media (max-width: 30em) {
+  .small-col-2-of-5 {
+    width: 40%; } }
+
+@media (max-width: 30em) {
+  .small-col-3-of-5 {
+    width: 60%; } }
+
+@media (max-width: 30em) {
+  .small-col-4-of-5 {
+    width: 80%; } }
+
+@media (max-width: 30em) {
+  .small-col-1-of-6 {
+    width: 16.66667%; } }
+
+@media (max-width: 30em) {
+  .small-col-2-of-6 {
+    width: 33.33333%; } }
+
+@media (max-width: 30em) {
+  .small-col-3-of-6 {
+    width: 50%; } }
+
+@media (max-width: 30em) {
+  .small-col-4-of-6 {
+    width: 66.66667%; } }
+
+@media (max-width: 30em) {
+  .small-col-5-of-6 {
+    width: 83.33333%; } }
+
+@media (max-width: 30em) {
+  .small-col-1-of-7 {
+    width: 14.28571%; } }
+
+@media (max-width: 30em) {
+  .small-col-2-of-7 {
+    width: 28.57143%; } }
+
+@media (max-width: 30em) {
+  .small-col-3-of-7 {
+    width: 42.85714%; } }
+
+@media (max-width: 30em) {
+  .small-col-4-of-7 {
+    width: 57.14286%; } }
+
+@media (max-width: 30em) {
+  .small-col-5-of-7 {
+    width: 71.42857%; } }
+
+@media (max-width: 30em) {
+  .small-col-6-of-7 {
+    width: 85.71429%; } }
+
+@media (max-width: 30em) {
+  .small-col-1-of-8 {
+    width: 12.5%; } }
+
+@media (max-width: 30em) {
+  .small-col-2-of-8 {
+    width: 25%; } }
+
+@media (max-width: 30em) {
+  .small-col-3-of-8 {
+    width: 37.5%; } }
+
+@media (max-width: 30em) {
+  .small-col-4-of-8 {
+    width: 50%; } }
+
+@media (max-width: 30em) {
+  .small-col-5-of-8 {
+    width: 62.5%; } }
+
+@media (max-width: 30em) {
+  .small-col-6-of-8 {
+    width: 75%; } }
+
+@media (max-width: 30em) {
+  .small-col-7-of-8 {
+    width: 87.5%; } }
+
+@media (max-width: 30em) {
+  .small-col-1-of-9 {
+    width: 11.11111%; } }
+
+@media (max-width: 30em) {
+  .small-col-2-of-9 {
+    width: 22.22222%; } }
+
+@media (max-width: 30em) {
+  .small-col-3-of-9 {
+    width: 33.33333%; } }
+
+@media (max-width: 30em) {
+  .small-col-4-of-9 {
+    width: 44.44444%; } }
+
+@media (max-width: 30em) {
+  .small-col-5-of-9 {
+    width: 55.55556%; } }
+
+@media (max-width: 30em) {
+  .small-col-6-of-9 {
+    width: 66.66667%; } }
+
+@media (max-width: 30em) {
+  .small-col-7-of-9 {
+    width: 77.77778%; } }
+
+@media (max-width: 30em) {
+  .small-col-8-of-9 {
+    width: 88.88889%; } }
+
+@media (max-width: 30em) {
+  .small-col-1-of-10 {
+    width: 10%; } }
+
+@media (max-width: 30em) {
+  .small-col-2-of-10 {
+    width: 20%; } }
+
+@media (max-width: 30em) {
+  .small-col-3-of-10 {
+    width: 30%; } }
+
+@media (max-width: 30em) {
+  .small-col-4-of-10 {
+    width: 40%; } }
+
+@media (max-width: 30em) {
+  .small-col-5-of-10 {
+    width: 50%; } }
+
+@media (max-width: 30em) {
+  .small-col-6-of-10 {
+    width: 60%; } }
+
+@media (max-width: 30em) {
+  .small-col-7-of-10 {
+    width: 70%; } }
+
+@media (max-width: 30em) {
+  .small-col-8-of-10 {
+    width: 80%; } }
+
+@media (max-width: 30em) {
+  .small-col-9-of-10 {
+    width: 90%; } }
+
+@media (max-width: 30em) {
+  .small-col-1-of-11 {
+    width: 9.09091%; } }
+
+@media (max-width: 30em) {
+  .small-col-2-of-11 {
+    width: 18.18182%; } }
+
+@media (max-width: 30em) {
+  .small-col-3-of-11 {
+    width: 27.27273%; } }
+
+@media (max-width: 30em) {
+  .small-col-4-of-11 {
+    width: 36.36364%; } }
+
+@media (max-width: 30em) {
+  .small-col-5-of-11 {
+    width: 45.45455%; } }
+
+@media (max-width: 30em) {
+  .small-col-6-of-11 {
+    width: 54.54545%; } }
+
+@media (max-width: 30em) {
+  .small-col-7-of-11 {
+    width: 63.63636%; } }
+
+@media (max-width: 30em) {
+  .small-col-8-of-11 {
+    width: 72.72727%; } }
+
+@media (max-width: 30em) {
+  .small-col-9-of-11 {
+    width: 81.81818%; } }
+
+@media (max-width: 30em) {
+  .small-col-10-of-11 {
+    width: 90.90909%; } }
+
+@media (max-width: 30em) {
+  .small-col-1-of-12 {
+    width: 8.33333%; } }
+
+@media (max-width: 30em) {
+  .small-col-2-of-12 {
+    width: 16.66667%; } }
+
+@media (max-width: 30em) {
+  .small-col-3-of-12 {
+    width: 25%; } }
+
+@media (max-width: 30em) {
+  .small-col-4-of-12 {
+    width: 33.33333%; } }
+
+@media (max-width: 30em) {
+  .small-col-5-of-12 {
+    width: 41.66667%; } }
+
+@media (max-width: 30em) {
+  .small-col-6-of-12 {
+    width: 50%; } }
+
+@media (max-width: 30em) {
+  .small-col-7-of-12 {
+    width: 58.33333%; } }
+
+@media (max-width: 30em) {
+  .small-col-8-of-12 {
+    width: 66.66667%; } }
+
+@media (max-width: 30em) {
+  .small-col-9-of-12 {
+    width: 75%; } }
+
+@media (max-width: 30em) {
+  .small-col-10-of-12 {
+    width: 83.33333%; } }
+
+@media (max-width: 30em) {
+  .small-col-11-of-12 {
+    width: 91.66667%; } }
+
+@media (max-width: 50em) {
+  .medium-col-1-of-1 {
+    width: 100%; } }
+
+@media (max-width: 50em) {
+  .medium-col-1-of-2 {
+    width: 50%; } }
+
+@media (max-width: 50em) {
+  .medium-col-1-of-3 {
+    width: 33.33333%; } }
+
+@media (max-width: 50em) {
+  .medium-col-2-of-3 {
+    width: 66.66667%; } }
+
+@media (max-width: 50em) {
+  .medium-col-1-of-4 {
+    width: 25%; } }
+
+@media (max-width: 50em) {
+  .medium-col-2-of-4 {
+    width: 50%; } }
+
+@media (max-width: 50em) {
+  .medium-col-3-of-4 {
+    width: 75%; } }
+
+@media (max-width: 50em) {
+  .medium-col-1-of-5 {
+    width: 20%; } }
+
+@media (max-width: 50em) {
+  .medium-col-2-of-5 {
+    width: 40%; } }
+
+@media (max-width: 50em) {
+  .medium-col-3-of-5 {
+    width: 60%; } }
+
+@media (max-width: 50em) {
+  .medium-col-4-of-5 {
+    width: 80%; } }
+
+@media (max-width: 50em) {
+  .medium-col-1-of-6 {
+    width: 16.66667%; } }
+
+@media (max-width: 50em) {
+  .medium-col-2-of-6 {
+    width: 33.33333%; } }
+
+@media (max-width: 50em) {
+  .medium-col-3-of-6 {
+    width: 50%; } }
+
+@media (max-width: 50em) {
+  .medium-col-4-of-6 {
+    width: 66.66667%; } }
+
+@media (max-width: 50em) {
+  .medium-col-5-of-6 {
+    width: 83.33333%; } }
+
+@media (max-width: 50em) {
+  .medium-col-1-of-7 {
+    width: 14.28571%; } }
+
+@media (max-width: 50em) {
+  .medium-col-2-of-7 {
+    width: 28.57143%; } }
+
+@media (max-width: 50em) {
+  .medium-col-3-of-7 {
+    width: 42.85714%; } }
+
+@media (max-width: 50em) {
+  .medium-col-4-of-7 {
+    width: 57.14286%; } }
+
+@media (max-width: 50em) {
+  .medium-col-5-of-7 {
+    width: 71.42857%; } }
+
+@media (max-width: 50em) {
+  .medium-col-6-of-7 {
+    width: 85.71429%; } }
+
+@media (max-width: 50em) {
+  .medium-col-1-of-8 {
+    width: 12.5%; } }
+
+@media (max-width: 50em) {
+  .medium-col-2-of-8 {
+    width: 25%; } }
+
+@media (max-width: 50em) {
+  .medium-col-3-of-8 {
+    width: 37.5%; } }
+
+@media (max-width: 50em) {
+  .medium-col-4-of-8 {
+    width: 50%; } }
+
+@media (max-width: 50em) {
+  .medium-col-5-of-8 {
+    width: 62.5%; } }
+
+@media (max-width: 50em) {
+  .medium-col-6-of-8 {
+    width: 75%; } }
+
+@media (max-width: 50em) {
+  .medium-col-7-of-8 {
+    width: 87.5%; } }
+
+@media (max-width: 50em) {
+  .medium-col-1-of-9 {
+    width: 11.11111%; } }
+
+@media (max-width: 50em) {
+  .medium-col-2-of-9 {
+    width: 22.22222%; } }
+
+@media (max-width: 50em) {
+  .medium-col-3-of-9 {
+    width: 33.33333%; } }
+
+@media (max-width: 50em) {
+  .medium-col-4-of-9 {
+    width: 44.44444%; } }
+
+@media (max-width: 50em) {
+  .medium-col-5-of-9 {
+    width: 55.55556%; } }
+
+@media (max-width: 50em) {
+  .medium-col-6-of-9 {
+    width: 66.66667%; } }
+
+@media (max-width: 50em) {
+  .medium-col-7-of-9 {
+    width: 77.77778%; } }
+
+@media (max-width: 50em) {
+  .medium-col-8-of-9 {
+    width: 88.88889%; } }
+
+@media (max-width: 50em) {
+  .medium-col-1-of-10 {
+    width: 10%; } }
+
+@media (max-width: 50em) {
+  .medium-col-2-of-10 {
+    width: 20%; } }
+
+@media (max-width: 50em) {
+  .medium-col-3-of-10 {
+    width: 30%; } }
+
+@media (max-width: 50em) {
+  .medium-col-4-of-10 {
+    width: 40%; } }
+
+@media (max-width: 50em) {
+  .medium-col-5-of-10 {
+    width: 50%; } }
+
+@media (max-width: 50em) {
+  .medium-col-6-of-10 {
+    width: 60%; } }
+
+@media (max-width: 50em) {
+  .medium-col-7-of-10 {
+    width: 70%; } }
+
+@media (max-width: 50em) {
+  .medium-col-8-of-10 {
+    width: 80%; } }
+
+@media (max-width: 50em) {
+  .medium-col-9-of-10 {
+    width: 90%; } }
+
+@media (max-width: 50em) {
+  .medium-col-1-of-11 {
+    width: 9.09091%; } }
+
+@media (max-width: 50em) {
+  .medium-col-2-of-11 {
+    width: 18.18182%; } }
+
+@media (max-width: 50em) {
+  .medium-col-3-of-11 {
+    width: 27.27273%; } }
+
+@media (max-width: 50em) {
+  .medium-col-4-of-11 {
+    width: 36.36364%; } }
+
+@media (max-width: 50em) {
+  .medium-col-5-of-11 {
+    width: 45.45455%; } }
+
+@media (max-width: 50em) {
+  .medium-col-6-of-11 {
+    width: 54.54545%; } }
+
+@media (max-width: 50em) {
+  .medium-col-7-of-11 {
+    width: 63.63636%; } }
+
+@media (max-width: 50em) {
+  .medium-col-8-of-11 {
+    width: 72.72727%; } }
+
+@media (max-width: 50em) {
+  .medium-col-9-of-11 {
+    width: 81.81818%; } }
+
+@media (max-width: 50em) {
+  .medium-col-10-of-11 {
+    width: 90.90909%; } }
+
+@media (max-width: 50em) {
+  .medium-col-1-of-12 {
+    width: 8.33333%; } }
+
+@media (max-width: 50em) {
+  .medium-col-2-of-12 {
+    width: 16.66667%; } }
+
+@media (max-width: 50em) {
+  .medium-col-3-of-12 {
+    width: 25%; } }
+
+@media (max-width: 50em) {
+  .medium-col-4-of-12 {
+    width: 33.33333%; } }
+
+@media (max-width: 50em) {
+  .medium-col-5-of-12 {
+    width: 41.66667%; } }
+
+@media (max-width: 50em) {
+  .medium-col-6-of-12 {
+    width: 50%; } }
+
+@media (max-width: 50em) {
+  .medium-col-7-of-12 {
+    width: 58.33333%; } }
+
+@media (max-width: 50em) {
+  .medium-col-8-of-12 {
+    width: 66.66667%; } }
+
+@media (max-width: 50em) {
+  .medium-col-9-of-12 {
+    width: 75%; } }
+
+@media (max-width: 50em) {
+  .medium-col-10-of-12 {
+    width: 83.33333%; } }
+
+@media (max-width: 50em) {
+  .medium-col-11-of-12 {
+    width: 91.66667%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-1-of-1 {
+    width: 100%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-1-of-2 {
+    width: 50%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-1-of-3 {
+    width: 33.33333%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-2-of-3 {
+    width: 66.66667%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-1-of-4 {
+    width: 25%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-2-of-4 {
+    width: 50%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-3-of-4 {
+    width: 75%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-1-of-5 {
+    width: 20%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-2-of-5 {
+    width: 40%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-3-of-5 {
+    width: 60%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-4-of-5 {
+    width: 80%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-1-of-6 {
+    width: 16.66667%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-2-of-6 {
+    width: 33.33333%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-3-of-6 {
+    width: 50%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-4-of-6 {
+    width: 66.66667%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-5-of-6 {
+    width: 83.33333%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-1-of-7 {
+    width: 14.28571%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-2-of-7 {
+    width: 28.57143%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-3-of-7 {
+    width: 42.85714%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-4-of-7 {
+    width: 57.14286%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-5-of-7 {
+    width: 71.42857%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-6-of-7 {
+    width: 85.71429%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-1-of-8 {
+    width: 12.5%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-2-of-8 {
+    width: 25%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-3-of-8 {
+    width: 37.5%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-4-of-8 {
+    width: 50%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-5-of-8 {
+    width: 62.5%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-6-of-8 {
+    width: 75%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-7-of-8 {
+    width: 87.5%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-1-of-9 {
+    width: 11.11111%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-2-of-9 {
+    width: 22.22222%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-3-of-9 {
+    width: 33.33333%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-4-of-9 {
+    width: 44.44444%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-5-of-9 {
+    width: 55.55556%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-6-of-9 {
+    width: 66.66667%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-7-of-9 {
+    width: 77.77778%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-8-of-9 {
+    width: 88.88889%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-1-of-10 {
+    width: 10%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-2-of-10 {
+    width: 20%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-3-of-10 {
+    width: 30%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-4-of-10 {
+    width: 40%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-5-of-10 {
+    width: 50%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-6-of-10 {
+    width: 60%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-7-of-10 {
+    width: 70%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-8-of-10 {
+    width: 80%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-9-of-10 {
+    width: 90%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-1-of-11 {
+    width: 9.09091%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-2-of-11 {
+    width: 18.18182%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-3-of-11 {
+    width: 27.27273%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-4-of-11 {
+    width: 36.36364%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-5-of-11 {
+    width: 45.45455%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-6-of-11 {
+    width: 54.54545%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-7-of-11 {
+    width: 63.63636%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-8-of-11 {
+    width: 72.72727%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-9-of-11 {
+    width: 81.81818%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-10-of-11 {
+    width: 90.90909%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-1-of-12 {
+    width: 8.33333%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-2-of-12 {
+    width: 16.66667%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-3-of-12 {
+    width: 25%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-4-of-12 {
+    width: 33.33333%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-5-of-12 {
+    width: 41.66667%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-6-of-12 {
+    width: 50%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-7-of-12 {
+    width: 58.33333%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-8-of-12 {
+    width: 66.66667%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-9-of-12 {
+    width: 75%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-10-of-12 {
+    width: 83.33333%; } }
+
+@media (max-width: 68.75em) {
+  .large-col-11-of-12 {
+    width: 91.66667%; } }
+
 /*
     Calculate header sizes and create classes similair to header tags.
     EG
     <h1> -> .h1
 */
-/*  Set max and min number of headers to be used in project (h1 through h6) */
 /*  Calculate header font-size using $-fw-fontsize & $-fw-ratio,
     also set default margin-bottom of al headers to $-fw-baseline (because it's
     easy) */
@@ -589,22 +1571,58 @@ p {
   p:last-child {
     margin-bottom: 0; }
 
+/***
+    CLEAR FIX
+
+    Clear floats for parent element
+***/
+.cf:after, .grid:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .grid {
   margin: 0 auto; }
-  .grid:after {
-    content: "";
-    display: table;
-    clear: both; }
 
 .grid__cell {
   float: left;
   padding: 0.7rem; }
+
+/************
+
+    BASELINEGRID
+
+    Include in HTML after <body> of before </body>.
+    Repeat <div class="baselinegrid__line"></div> until screen is filled
+    <div class="baselinegrid">
+        <div class="baselinegrid__line"></div>
+    </div>
+
+************/
+.baselinegrid {
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden; }
+
+.baselinegrid__line {
+  height: 0.7rem; }
+  .baselinegrid__line:nth-child(even) {
+    border-bottom: 1px solid rgba(0, 0, 255, 0.25); }
+  .baselinegrid__line:nth-child(odd) {
+    border-bottom: 1px dotted rgba(0, 0, 255, 0.25); }
 
 body {
   padding: 1.4rem;
   font-size: 1rem;
   line-height: 1.4rem;
   background: pink; }
+  @media (max-width: 30em) {
+    body {
+      background: red; } }
 
 .wrapper {
   width: 50%;

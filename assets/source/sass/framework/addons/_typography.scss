@@ -1,30 +1,8 @@
 /*
-    Type scales ratios.
-
-    This determines the exponential growth of the font-size as seen on
-    http://type-scale.com/
-*/
-$-fw-minor-second: 1.067;
-$-fw-major-second: 1.125;
-$-fw-minor-third: 1.2;
-$-fw-major-third: 1.25;
-$-fw-perfect-fourth: 1.333;
-$-fw-augmented-fourth: 1.414;
-$-fw-perfect-fifth: 1.5;
-$-fw-golden-ratio: 1.618;
-
-/*  Set default ratio used throughout project */
-$-fw-ratio: $-fw-major-third !default;
-
-/*
     Calculate header sizes and create classes similair to header tags.
     EG
     <h1> -> .h1
 */
-
-/*  Set max and min number of headers to be used in project (h1 through h6) */
-$-fw-h-type--min: 1 !default;
-$-fw-h-type--max: 6 !default;
 
 /*  Calculate header font-size using $-fw-fontsize & $-fw-ratio,
     also set default margin-bottom of al headers to $-fw-baseline (because it's

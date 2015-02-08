@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+@import "framework/spine/defaults";
 @import "framework/spine/normalize";
 @import "framework/spine/mixins";
 @import "framework/spine/reset";
@@ -7,16 +8,20 @@
 @import "config";
 
 @import "framework/addons/widths";
-@import "framework/addons/baseline";
 @import "framework/addons/typography";
+@import "framework/addons/cf";
 
 @import "framework/components/grid";
+@import "framework/components/baselinegrid";
 
 body {
     padding: $-fw-baseline;
     font-size: $-fw-fontsize;
     line-height: $-fw-baseline;
     background: pink;
+    @media (max-width: $small) {
+            background: red;
+    }
 }
 .wrapper {
     width: 50%;

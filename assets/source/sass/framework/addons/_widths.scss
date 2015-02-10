@@ -5,7 +5,8 @@
  *
  */
 
-@for $i from $grid-start through $grid-end {
+ // Calculate column widths and create classnames
+@for $i from $-fw-grid-start through $-fw-grid-end {
     @if $i <= 2 {
         .col-1-of-#{$i} {
             width: (100 / $i) * 1%;
@@ -19,30 +20,33 @@
     }
 }
 
-@each $c in $breakpoints {
-    $screenwidth: null;
-    @if $c == small {
-        $screenwidth: $small;
-    } @else if $c == medium {
-        $screenwidth: $medium;
-    } @else if $c == large {
-        $screenwidth: $large;
-    }
-    @for $i from $grid-start through $grid-end {
-        @if $i <= 2 {
-            .#{$c}-col-1-of-#{$i} {
-                @media (max-width: $screenwidth) {
+// Calculate responsive column widths and create classnames
+$n: 1;
+@each $-fw-breakpoint__type in $-fw-breakpoint__sizes {
+
+    //Get responsive breakpoint width
+    $-fw-breakpoint__size: nth($-fw-breakpoint__type, 1);
+    //Get breakpointname to use in classname
+    $-fw-breakpoint__name: nth($-fw-breakpoint__type, 2);
+
+    //Set repsonsive breakpoint width
+    @media (max-width: $-fw-breakpoint__size) {
+        //Loop through number of columns set for grid
+        @for $i from $-fw-grid-start through $-fw-grid-end {
+            @if $i <= 2 {
+                //Set breakpoint classname for x-of-1 and x-of-2
+                .#{$-fw-breakpoint__name}-col-1-of-#{$i} {
                     width: (100 / $i) * 1%;
                 }
-            }
-        } @else {
-            @for $x from ($i - 1) through 1 {
-                .#{$c}-col-#{$i - $x}-of-#{$i} {
-                    @media (max-width: $screenwidth) {
+            } @else {
+                //Set breakpoint classname for x-of-3 and $-fw-grid-end
+                @for $x from ($i - 1) through 1 {
+                    .#{$-fw-breakpoint__name}-col-#{$i - $x}-of-#{$i} {
                         width: 100 - ((100 / $i) * $x) * 1%;
                     }
                 }
             }
         }
     }
+    $n: $n + 1;
 }

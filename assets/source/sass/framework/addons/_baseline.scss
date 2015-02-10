@@ -1,0 +1,26 @@
+/***
+    BASELINE
+
+    Setup baseline and spacing units for vertical & horizontal rhythm.
+    For h1 through h6 (and other textelements) you can use
+    $-fw-fontsize * x.5 $-fw-baseline, if rounded values are too big or small.
+
+    EG:
+    h2 {
+        line-height: $-fw-baseline * 2.5;
+    }
+
+***/
+/*
+    Set default font-size
+*/
+$-fw-fontsize: 1rem !default;
+/*
+    Set default line-height
+*/
+$-fw-lineheight: 1.4 !default;
+/*
+    Calculate baseline (= spacing unit for margins and paddings) from default
+    font-size and default line-height
+*/
+$-fw-baseline: $-fw-fontsize * $-fw-lineheight !default;

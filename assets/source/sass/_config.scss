@@ -9,11 +9,11 @@
     Documentation -> addon/baseline
 ***/
 
-/* Set default (body copy) font-size */
-//$-fw-fontsize: 1;
+/* Set (body copy) font-size */
+//$-fw-fontsize: 1rem;
 
-/* Set default baseline for vertical rhythm */
-//$-fw-lineheight: 2;
+/* Set baseline (= $-fw-fontsize * $-fw-lineheight) height for vertical rhythm */
+//$-fw-lineheight: 1.4;
 
 /***
     TYPE SCALE
@@ -36,8 +36,8 @@
 //$-fw-ratio: $-fw-golden-ratio;
 
 /*  Set max and min number of headers to be used in project (h1 through h6) */
-//$-fw-h-type--min: 1;
-//$-fw-h-type--max: 6;
+//$-fw-h-type--max: 1;
+//$-fw-h-type--min: 6;
 
 /***
     GRID
@@ -45,12 +45,12 @@
 ***/
 /*  Set number of columns used in grid, smaller $grid-end = less lines of css.
     $grid-start should remain 1 in most cases. */
-//$grid-start: 1;
-//$grid-end: 12;
+//$-fw-grid-start: 1;
+//$-fw-grid-end: 20;
 
 /***
     COMPONENTS
 ***/
-$-fw-use-baseline-grid      : true;
+$-fw-use-baseline-grid      : false;
 $-fw-use-grid               : true;
 $-fw-use-grid--responsive   : true;

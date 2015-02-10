@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+/**
+ *
+ */
+
+@for $i from $-fw-grid-start through $-fw-grid-end {
+    @if $i <= 2 {
+        .col-1-of-#{$i} {
+            width: (100 / $i) * 1%;
+        }
+    } @else {
+        @for $x from ($i - 1) through 1 {
+            .col-#{$i - $x}-of-#{$i} {
+                width: 100 - ((100 / $i) * $x) * 1%;
+            }
+        }
+    }
+}
+
+$n: 1;
+@each $c in $-fw-breakpoint__names {
+    @for $i from $-fw-grid-start through $-fw-grid-end {
+        @if $i <= 2 {
+            .#{$c}-col-1-of-#{$i} {
+                @media (max-width: nth($-fw-breakpoint__sizes, $n)) {
+                    width: (100 / $i) * 1%;
+                }
+            }
+        } @else {
+            @for $x from ($i - 1) through 1 {
+                .#{$c}-col-#{$i - $x}-of-#{$i} {
+                    @media (max-width: nth($-fw-breakpoint__sizes, $n)) {
+                        width: 100 - ((100 / $i) * $x) * 1%;
+                    }
+                }
+            }
+        }
+    }
+    $n: $n + 1;
+}

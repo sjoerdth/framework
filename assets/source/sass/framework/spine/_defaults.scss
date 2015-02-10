@@ -6,32 +6,6 @@
  */
 
 /***
-    BASELINE
-
-    Setup baseline and spacing units for vertical & horizontal rhythm.
-    For h1 through h6 (and other textelements) you can use
-    $-fw-fontsize * x.5 $-fw-baseline, if rounded values are too big or small.
-    EG:
-    h2 {
-        line-height: $-fw-baseline * 2.5;
-    }
-
-***/
-/*
-    Set default font-size
-*/
-$-fw-fontsize: 1rem !default;
-/*
-    Set default line-height
-*/
-$-fw-lineheight: 1.4 !default;
-/*
-    Calculate baseline (= spacing unit for margins and paddings) from default
-    font-size and default line-height
-*/
-$-fw-baseline: $-fw-fontsize * $-fw-lineheight !default;
-
-/***
     TYPE
 ***/
 /*
@@ -54,7 +28,9 @@ $-fw-golden-ratio       : 1.618 !default;
 */
 $-fw-ratio: $-fw-major-third !default;
 
-/*  Set max and min number of headers to be used in project (h1 through h6) */
+/*
+    Set max and min number of headers to be used in project (h1 through h6)
+*/
 $-fw-h-type--min: 1 !default;
 $-fw-h-type--max: 6 !default;
 
@@ -62,14 +38,27 @@ $-fw-h-type--max: 6 !default;
     GRID
 ***/
 /*  Set default number of columns used in grid */
-$grid-start: 1 !default;
-$grid-end: 12 !default;
+$-fw-grid-start: 1 !default;
+$-fw-grid-end: 12 !default;
 
-$small:     30em !default; // Portrait mobile to landscape mobile
-$medium:    50em !default; // Portrait tablet to landscape tablet
-$large:     68.750em !default; // Small desktop to large desktop
-
-$breakpoints: small, medium, large;
+/***
+    WIDTHS & BREAKPOINTS
+***/
+/*
+    Define breakpoints for responsive
+*/
+$-fw-breakpoint__large:     68.750em !default; // Small desktop to large desktop
+$-fw-breakpoint__medium:    50em !default; // Portrait tablet to landscape tablet
+$-fw-breakpoint__small:     30em !default; // Portrait mobile to landscape mobile
+/*
+    Set array containing all breakpoints in descending order, these will be used
+    to create the media-queries to set the width of your grid columns.
+*/
+$-fw-breakpoint__sizes: (
+    ($-fw-breakpoint__large, large),
+    ($-fw-breakpoint__medium, medium),
+    ($-fw-breakpoint__small, small)
+);
 
 /***
     COMPONENTS

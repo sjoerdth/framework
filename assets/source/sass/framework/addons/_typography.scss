@@ -7,13 +7,46 @@
 /*  Calculate header font-size using $-fw-fontsize & $-fw-ratio,
     also set default margin-bottom of al headers to $-fw-baseline (because it's
     easy) */
+
 $-fw-ratio--exp: $-fw-ratio;
+
 @for $i from $-fw-h-type--min through $-fw-h-type--max {
-  h#{7 - $i},.h#{7 - $i} {
-      font-size: $-fw-fontsize * $-fw-ratio--exp;
-      margin-bottom: $-fw-baseline;
-  }
-  $-fw-ratio--exp: $-fw-ratio--exp * $-fw-ratio;
+
+    h#{7 - $i}, .h#{7 - $i} {
+        font-size: $-fw-fontsize * $-fw-ratio--exp;
+        margin-bottom: $-fw-baseline;
+    }
+    $-fw-ratio--exp: $-fw-ratio--exp * $-fw-ratio;
+}
+/*
+    Get classnames for bigger than bodyfont based on metric
+    system, ascending: .deca, .hecto, .kilo, .mega, .giga, .tera.
+    Same size as headers but without standard margin.
+*/
+$-fw-ratio--exp: $-fw-ratio;
+@for $i from 1 through length($-fw-fontsize__big) {
+
+    $-fw-fontclassname: nth($-fw-fontsize__big, $i);
+
+    .#{$-fw-fontclassname} {
+        font-size: $-fw-fontsize * $-fw-ratio--exp;
+    }
+    $-fw-ratio--exp: $-fw-ratio--exp * $-fw-ratio;
+}
+
+/*
+    Get classnames for smaller than bodyfont based on metric
+    system, descending: .deci, .centi, .milli, .micro, .nano, .pico
+*/
+$-fw-ratio--exp: $-fw-ratio;
+@for $i from 1 through length($-fw-fontsize__small) {
+
+    $-fw-fontclassname: nth($-fw-fontsize__small, $i);
+
+    .#{$-fw-fontclassname} {
+        font-size: $-fw-fontsize / $-fw-ratio--exp;
+    }
+    $-fw-ratio--exp: $-fw-ratio--exp * $-fw-ratio;
 }
 
 p {

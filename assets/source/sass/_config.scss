@@ -10,10 +10,10 @@
 ***/
 
 /* Set (body copy) font-size */
-//$-fw-fontsize: 1rem;
+//$-fw-fontsize: 2rem;
 
 /* Set baseline (= $-fw-fontsize * $-fw-lineheight) height for vertical rhythm */
-//$-fw-lineheight: 1.4;
+//$-fw-lineheight: 1.6;
 
 /***
     TYPE SCALE
@@ -33,7 +33,7 @@
     $-fw-perfect-fifth: 1.5;
     $-fw-golden-ratio: 1.618;
 ***/
-//$-fw-ratio: $-fw-golden-ratio;
+//$-fw-ratio: $-fw-augmented-fourth;
 
 /*  Set max and min number of headers to be used in project (h1 through h6) */
 //$-fw-h-type--max: 1;
@@ -51,6 +51,6 @@
 /***
     COMPONENTS
 ***/
-$-fw-use-baseline-grid      : false;
+$-fw-use-baseline-grid      : true;
 $-fw-use-grid               : true;
 $-fw-use-grid--responsive   : true;

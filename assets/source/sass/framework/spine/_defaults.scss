@@ -34,6 +34,24 @@ $-fw-ratio: $-fw-major-third !default;
 $-fw-h-type--min: 1 !default;
 $-fw-h-type--max: 6 !default;
 
+$-fw-fontsize__big: (
+    deca,
+    hecto,
+    kilo,
+    mega,
+    giga,
+    tera
+);
+
+$-fw-fontsize__small: (
+    deci,
+    centi,
+    milli,
+    micro,
+    nano,
+    pico
+);
+
 /***
     GRID
 ***/

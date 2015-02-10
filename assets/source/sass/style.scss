@@ -56,22 +56,22 @@ body {
     margin-left: auto;
     background: white;
 }
-h1, .h1 {
+h1, .h1, .tera {
     line-height: $-fw-baseline * 4;
 }
-h2, .h2 {
+h2, .h2, .giga {
     line-height: $-fw-baseline * 3;
 }
-h3, .h3 {
+h3, .h3, .mega {
     line-height: $-fw-baseline * 3;
 }
-h4, .h4 {
+h4, .h4, .kilo {
     line-height: $-fw-baseline * 2;
 }
-h5, .h5 {
+h5, .h5, .hecto {
     line-height: $-fw-baseline * 2;
 }
-h6, .h6 {
+h6, .h6, .deca {
     line-height: $-fw-baseline * 2;
 }
 

@@ -1378,6 +1378,51 @@ h1, .h1 {
   font-size: 3.8147rem;
   margin-bottom: 1.4rem; }
 
+/*
+    Get classnames for bigger than bodyfont based on metric
+    system, ascending: .deca, .hecto, .kilo, .mega, .giga, .tera.
+    Same size as headers but without standard margin.
+*/
+.deca {
+  font-size: 1.25rem; }
+
+.hecto {
+  font-size: 1.5625rem; }
+
+.kilo {
+  font-size: 1.95313rem; }
+
+.mega {
+  font-size: 2.44141rem; }
+
+.giga {
+  font-size: 3.05176rem; }
+
+.tera {
+  font-size: 3.8147rem; }
+
+/*
+    Get classnames for smaller than bodyfont based on metric
+    system, descending: .deci, .centi, .milli, .micro, .nano, .pico
+*/
+.deci {
+  font-size: 0.8rem; }
+
+.centi {
+  font-size: 0.64rem; }
+
+.milli {
+  font-size: 0.512rem; }
+
+.micro {
+  font-size: 0.4096rem; }
+
+.nano {
+  font-size: 0.32768rem; }
+
+.pico {
+  font-size: 0.26214rem; }
+
 p {
   margin-bottom: 1.4rem; }
   p:last-child {
@@ -1411,6 +1456,22 @@ p {
     </div>
 
 ************/
+.baselinegrid {
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden; }
+
+.baselinegrid__line {
+  height: 0.7rem; }
+  .baselinegrid__line:nth-child(even) {
+    border-bottom: 1px solid rgba(0, 0, 255, 0.25); }
+  .baselinegrid__line:nth-child(odd) {
+    border-bottom: 1px dotted rgba(0, 0, 255, 0.25); }
+
 body {
   padding: 1.4rem;
   font-size: 1rem;
@@ -1449,22 +1510,22 @@ body {
   margin-left: auto;
   background: white; }
 
-h1, .h1 {
+h1, .h1, .tera {
   line-height: 5.6rem; }
 
-h2, .h2 {
+h2, .h2, .giga {
   line-height: 4.2rem; }
 
-h3, .h3 {
+h3, .h3, .mega {
   line-height: 4.2rem; }
 
-h4, .h4 {
+h4, .h4, .kilo {
   line-height: 2.8rem; }
 
-h5, .h5 {
+h5, .h5, .hecto {
   line-height: 2.8rem; }
 
-h6, .h6 {
+h6, .h6, .deca {
   line-height: 2.8rem; }
 
 .test-box {

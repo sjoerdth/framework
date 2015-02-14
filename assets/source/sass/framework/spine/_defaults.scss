@@ -78,6 +78,12 @@ $-fw-breakpoint__sizes: (
     ($-fw-breakpoint__small, small)
 );
 
+$-fw-breakpoints: (
+    large: $-fw-breakpoint__large,
+    medium: $-fw-breakpoint__medium,
+    small: $-fw-breakpoint__small
+);
+
 /***
     COMPONENTS
 ***/

@@ -8,18 +8,26 @@
 @import "config";
 
 @import "framework/addons/baseline";
+@import "framework/addons/font-face";
 @import "framework/addons/widths";
 @import "framework/addons/typography";
 @import "framework/addons/cf";
+@import "framework/addons/zindex";
 
 @import "framework/components/grid";
 @import "framework/components/baselinegrid";
 
+@import "ui/framework/colors";
+@import "ui/framework/typography";
+
+@import "ui/aside";
+@import "ui/blockquote";
+@import "ui/image";
+@import "ui/grid";
+@import "ui/layout";
+
 body {
-    padding: $-fw-baseline;
-    font-size: $-fw-fontsize;
-    line-height: $-fw-baseline;
-    background: pink;
+    /*
     @media (max-width: $-fw-breakpoint__large) {
             background: blue;
     }
@@ -29,6 +37,7 @@ body {
     @media (max-width: $-fw-breakpoint__small) {
             background: red;
     }
+    */
 
 }
 .test-box--responsive {
@@ -48,32 +57,7 @@ body {
         }
     }
 }
-.wrapper {
-    width: 50%;
-    padding: $-fw-baseline;
-    margin-right: auto;
-    margin-bottom: $-fw-baseline;
-    margin-left: auto;
-    background: white;
-}
-h1, .h1, .tera {
-    line-height: $-fw-baseline * 4;
-}
-h2, .h2, .giga {
-    line-height: $-fw-baseline * 3;
-}
-h3, .h3, .mega {
-    line-height: $-fw-baseline * 3;
-}
-h4, .h4, .kilo {
-    line-height: $-fw-baseline * 2;
-}
-h5, .h5, .hecto {
-    line-height: $-fw-baseline * 2;
-}
-h6, .h6, .deca {
-    line-height: $-fw-baseline * 2;
-}
+
 
 .test-box {
     padding: $-fw-baseline;

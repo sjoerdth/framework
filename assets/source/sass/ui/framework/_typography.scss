@@ -1,0 +1,111 @@
+@import url(http://fonts.googleapis.com/css?family=Neuton:400,700,400italic);
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family: "Cooper Hewitt", verdana;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.tera,
+.giga,
+.mega,
+.kilo,
+.hecto,
+.deca,
+.base {
+    font-family: "Cooper Hewitt", verdana;
+}
+
+
+h1, .h1, .tera {
+    line-height: $-fw-baseline * 4;
+}
+h2, .h2, .giga {
+    line-height: $-fw-baseline * 2;
+}
+h2 {
+    position: relative;
+    &:before,
+    &:after {
+        content: "\00a0";
+        display: inline-block;
+        //height: $-fw-baseline * 1;
+        width: 2rem;
+        //background: red;
+        line-height: $-fw-baseline;
+    }
+    &:before {
+        position: relative;
+        bottom: -10px;
+        border-top: 10px solid palette(grey, x-dark);
+    }
+    &:after {
+        position: relative;
+        top: -10px;
+        border-bottom: 10px solid palette(grey, x-dark);
+    }
+}
+h3, .h3, .mega {
+    line-height: $-fw-baseline * 2;
+}
+h4, .h4, .kilo {
+    line-height: $-fw-baseline * 1.5;
+}
+h5, .h5, .hecto {
+    line-height: $-fw-baseline * 2;
+}
+h6, .h6, .deca {
+    line-height: $-fw-baseline * 1.5;
+}
+
+/*
+    constrain text width:
+    "Robert Bringhurst puts a good measure at somewhere between 45 and 75 characters."
+    http://www.smashingmagazine.com/2011/11/29/the-perfect-paragraph/
+*/
+.plain-text {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 40rem;
+    min-width: 25rem;
+}
+
+.drop-cap {
+    >p:first-child {
+        &:first-letter {
+            font-size: $-fw-fontsize * 2.5;
+            padding-right: $-fw-baseline / 2;
+            padding-left: $-fw-baseline / 2;
+            padding-bottom: 5px;
+            margin-top: -7px;
+            background: /*url("../images/layout/dia-stripe.png")*/ palette(green);
+            text-shadow: 1px 1px 0 palette(green, light), 2px 2px 0 palette(grey, dark);
+        }
+    }
+}
+.drop-cap--remove {
+    >p:first-child {
+        &:first-letter {
+            padding-right: 0;
+            padding-left: 0;
+            padding-bottom: 0;
+            margin-top: 0;
+            background: none;
+            text-shadow: none;
+        }
+    }
+}
+
+.article__title {
+    display: block;
+}
+.article__subtitle {
+    display: block;
+    font-weight: normal;
+    @extend .kilo;
+}

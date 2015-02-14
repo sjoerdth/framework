@@ -55,3 +55,28 @@ p {
         margin-bottom: 0;
     }
 }
+
+/*
+* Drop cap
+*/
+.drop-cap {
+    >p:first-child {
+        &:first-letter {
+            float: left;
+            line-height: $-fw-baseline * 2;
+            font-size: $-fw-fontsize * 3;
+            margin-right: 2px;
+        }
+    }
+}
+
+/*
+* First line emphasis
+*/
+.first-line-em {
+    >p:first-child {
+        &:first-line {
+            font-weight: bold;
+        }
+    }
+}

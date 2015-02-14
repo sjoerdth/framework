@@ -1,0 +1,31 @@
+body {
+    font-size: $-fw-fontsize;
+    line-height: $-fw-baseline;
+    font-family: neuton, georgia, serif;
+    color: palette(grey, x-dark);
+    background: palette(grey, x-light);
+}
+.l-wrapper {
+    width: 80vw;
+    margin: auto;
+}
+.l-overlay-gfx {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    &:before {
+        content: "";
+        background-color: rgba(palette(green), 0.8);
+        background-blend-mode: multiply;
+        position: absolute;
+        height: 80vw;
+        @include vendor(transform-origin, 0% 0%);
+        @include vendor(transform, skewy(-60deg));
+        z-index: 1;
+        left: 0;
+        width: 300%;
+    }
+}

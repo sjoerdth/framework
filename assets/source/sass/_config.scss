@@ -10,7 +10,7 @@
 ***/
 
 /* Set (body copy) font-size */
-//$-fw-fontsize: 2rem;
+$-fw-fontsize: 1.5rem;
 
 /* Set baseline (= $-fw-fontsize * $-fw-lineheight) height for vertical rhythm */
 //$-fw-lineheight: 1.6;
@@ -33,11 +33,72 @@
     $-fw-perfect-fifth: 1.5;
     $-fw-golden-ratio: 1.618;
 ***/
-//$-fw-ratio: $-fw-augmented-fourth;
+$-fw-ratio: $-fw-minor-third;
 
 /*  Set max and min number of headers to be used in project (h1 through h6) */
 //$-fw-h-type--max: 1;
 //$-fw-h-type--min: 6;
+
+/*
+    Embed font-families
+
+$path: ../fonts/;
+$font-families: (
+  arial__normal: (
+    style-name: arial__style,
+    path: $path,
+    folder: arial,
+    file-name: arial__file--normal,
+    font-weight: normal,
+    font-style: normal
+  ),
+  arial__bold: (
+    style-name: arial__style,
+    path: $path,
+    folder: arial,
+    file-name: arial__file--bold,
+    font-weight: bold,
+    font-style: normal
+  ),
+  arial__italic: (
+    style-name: arial__style,
+    path: $path,
+    folder: arial,
+    file-name: arial__file--italic,
+    font-weight: normal,
+    font-style: italic
+  ),
+  georgia__italic: (
+    style-name: georgia__style,
+    path: $path,
+    folder: georgia,
+    file-name: georgia__file--italic,
+    font-weight: normal,
+    font-style: italic
+  )
+);
+*/
+
+$path: "../fonts";
+
+$font-families: (
+    cooperhewittbook__normal: (
+        style-name: "Cooper Hewitt",
+        path: $path,
+        folder: "cooperhewitt",
+        file-name: "cooperhewitt-book-webfont",
+        font-weight: normal,
+        font-style: normal
+    ),
+    cooperhewittbook__bold: (
+        style-name: "Cooper Hewitt",
+        path: $path,
+        folder: "cooperhewitt",
+        file-name: "cooperhewitt-bold-webfont",
+        font-weight: bold,
+        font-style: normal
+    )
+);
 
 /***
     GRID
@@ -46,11 +107,15 @@
 /*  Set number of columns used in grid, smaller $grid-end = less lines of css.
     $grid-start should remain 1 in most cases. */
 //$-fw-grid-start: 1;
-//$-fw-grid-end: 20;
+$-fw-grid-end: 9;
+
+$z-layers--custom: (
+    gfx-overlay: 5500,
+);
 
 /***
     COMPONENTS
 ***/
-$-fw-use-baseline-grid      : true;
+$-fw-use-baseline-grid      : false;
 $-fw-use-grid               : true;
 $-fw-use-grid--responsive   : true;

@@ -19,6 +19,7 @@
         left: 0;
         bottom: 0;
         overflow: hidden;
+        pointer-events: none;
     }
     .baselinegrid__line {
         height: $-fw-baseline * 0.5;

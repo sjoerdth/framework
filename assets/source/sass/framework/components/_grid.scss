@@ -1,12 +1,13 @@
 // clearfix
 @if $-fw-use-grid == true {
+
     .grid {
-        margin: 0 auto;
+        margin-left: $-fw-baseline * -1;
         @extend .cf;
     }
-
     .grid__cell {
         float: left;
-        padding: $-fw-baseline / 2;
+        padding-left: $-fw-baseline;
     }
-}
+
+} // /@if

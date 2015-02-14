@@ -1,0 +1,48 @@
+/*
+*   http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+
+x-dark
+dark *
+mid-dark
+base (default)
+mid-light
+light *
+x-light
+
+a {
+    color: palette(purple);
+    &:hover {
+        color: palette(purple, light);
+    }
+}
+
+*/
+
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+$color-grey: rgb(127, 127, 127);
+
+$color-theme-green: rgb(38, 132, 158);
+
+$palettes: (
+    green: (
+        base        : $color-theme-green,
+        x-light     : lighten($color-theme-green, 30%),
+        light       : lighten($color-theme-green, 20%),
+        mid-light   : lighten($color-theme-green, 10%),
+        mid-dark    : darken($color-theme-green, 10%),
+        dark        : darken($color-theme-green, 20%),
+        x-dark      : darken($color-theme-green, 30%)
+    ),
+    grey: (
+        base        : $color-grey,
+        x-light     : lighten($color-grey, 40%),
+        light       : lighten($color-grey, 20%),
+        mid-light   : lighten($color-grey, 10%),
+        mid-dark    : darken($color-grey, 10%),
+        dark        : darken($color-grey, 20%),
+        x-dark      : darken($color-grey, 35%)
+    )
+);

@@ -1,0 +1,8 @@
+.post-aside {
+    position: absolute; top: 0;
+    left: -40%; // = 2 col width of the main grid
+}
+.post-aside__push-in-grid {
+    margin-right: $-fw-baseline;
+    text-align: right;
+}

@@ -1,12 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Neuton:400,700,400italic);
 
+$body-stack: "neuton", georgia, serif;
+$header-stack: "Cooper Hewitt", arial, sans-serif;
+
 h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-    font-family: "Cooper Hewitt", verdana;
+    font-family: $header-stack;
     text-align: center;
     text-transform: uppercase;
 }
@@ -18,7 +21,7 @@ h6, .h6 {
 .hecto,
 .deca,
 .base {
-    font-family: "Cooper Hewitt", verdana;
+    font-family: $header-stack;
 }
 
 
@@ -73,6 +76,7 @@ h6, .h6, .deca {
     margin-left: auto;
     max-width: 40rem;
     min-width: 25rem;
+    @extend .cf;
 }
 
 .drop-cap {
@@ -82,24 +86,16 @@ h6, .h6, .deca {
             padding-right: $-fw-baseline / 2;
             padding-left: $-fw-baseline / 2;
             padding-bottom: 5px;
-            margin-top: -7px;
-            background: /*url("../images/layout/dia-stripe.png")*/ palette(green);
-            text-shadow: 1px 1px 0 palette(green, light), 2px 2px 0 palette(grey, dark);
+            margin-top: -6px;
+            display: inline-block;
+            vertical-align: top;
+            color: palette(green);
+            background: palette(grey, x-dark);
+            text-shadow: 0.1rem 0.1rem 0 palette(grey, x-dark), 0.2rem 0.2rem 0 palette(green, mid-dark);
         }
     }
 }
-.drop-cap--remove {
-    >p:first-child {
-        &:first-letter {
-            padding-right: 0;
-            padding-left: 0;
-            padding-bottom: 0;
-            margin-top: 0;
-            background: none;
-            text-shadow: none;
-        }
-    }
-}
+
 
 .article__title {
     display: block;

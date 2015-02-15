@@ -11,23 +11,32 @@
 </head>
 
 <body>
-    <img class="image--freeflow" src="assets/source/images/layout/header-photo.jpg">
-    <div class="l-wrapper">
+    <header class="site-header">
+        <div class="site-logo">
+            <div class="site-logo__logo">
+                <img src="assets/build/images/layout/site-logo.svg">
+            </div>
+            <div class="site-logo__slogan">
+                The Chronicles of an Untalented Cyclist
+            </div>
+        </div>
+    </header>
+    <div class="l-wrapper l-wrapper--main">
         <div class="grid">
             <div class="grid__cell col-2of9">
-                heyo
+
             </div>
             <div class="grid__cell col-5of9">
                 <article>
-                    <h2><span class="article__title">Training Day 7:</span><span class="article__subtitle">Sufferfest The Hunted</span></h2>
+                    <h2><span class="article__title">Training Day&nbsp;7:</span><span class="article__subtitle">Sufferfest The Hunted</span></h2>
                     <div style="position: relative">
                         <div class="plain-text drop-cap first-line-em">
                             <p>
                                 Morem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum, ligula eu tristique aliquet, arcu ex aliquam tellus, nec faucibus massa elit nec mauris. Aliquam consequat sagittis lorem ac rutrum. Ut ullamcorper felis quis convallis pretium. Vestibulum eros lectus, blandit ut porttitor quis, iaculis nec justo.
                             </p>
-                            <blockquote class="col-4of5 blog-blockquote">
+                            <blockquote class="col-4of5 pullquote">
                                 <p>Jen is a fantastic host and she makes interviewing podcast guests seem so easy! (It isn’t.) She has a gift for choosing guests who are prescient and entertaining.</p>
-                                — <cite>Karen McGrane</cite>
+                                <cite class="pullquote__cite">Karen McGrane</cite>
                             </blockquote>
                             <p>
                                 Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam risus justo, fringilla eget aliquam non, mollis finibus massa. Nunc elit mauris, venenatis et turpis in, tempus bibendum urna. Aliquam cursus, ex fringilla congue rutrum, neque velit commodo ante, sit amet venenatis purus nisi ut augue. Proin quis lobortis neque, ac egestas sapien. Suspendisse sollicitudin eleifend quam, vulputate lacinia leo tempor et. Sed feugiat porta eros tempus dictum. Vestibulum ultricies, odio sed bibendum ultricies, enim est ornare dui, sit amet fermentum urna massa sit amet lacus.
@@ -36,13 +45,20 @@
                                 Cras suscipit eros vestibulum laoreet elementum. Ut ac luctus ipsum. Ut vulputate eget leo at pellentesque. Quisque cursus tincidunt suscipit. Morbi at dolor sapien. Phasellus condimentum justo non massa ultricies, vel commodo velit cursus. Duis nisl lacus, efficitur ut posuere in, rhoncus et felis. Vestibulum aliquet magna et lacus interdum egestas.
                             </p>
                             <div class="col-2of5 post-aside">
-                                <div class="post-aside__push-in-grid">
-                                    <ul>
-                                        <li>Dit</li>
-                                        <li>Is</li>
-                                        <li>Een</li>
-                                        <li>Lijst</li>
-                                    </ul>
+                                <div class="post-aside__box">
+                                    <div class="post-aside__push-in-grid">
+                                        <ul class="list--reset date-list">
+                                            <li><span class="date-list__item">01</span></li>
+                                            <li><span class="date-list__item">Jan</span></li>
+                                            <li><span class="date-list__item">2015</span></li>
+                                        </ul>
+                                        <ul class="list--reset tag-list">
+                                            <li><a href="#" class="tag-list__tag">Dit</a></li>
+                                            <li><a href="#" class="tag-list__tag">Is</a></li>
+                                            <li><a href="#" class="tag-list__tag">Een</a></li>
+                                            <li><a href="#" class="tag-list__tag">Lijst</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -50,10 +66,10 @@
                 </article>
             </div>
             <div class="grid__cell col-1of9">
-                heyo
+
             </div>
             <div class="grid__cell col-1of9">
-                heyo
+
             </div>
         </div> <!-- /grid -->
     </div> <!-- /l-wrapper -->

@@ -37,6 +37,13 @@
 /***
     COMPONENTS
 ***/
+/**
+ * FROM INUIT CSS
+ * Create vendor-prefixed CSS in one go, e.g.
+ *
+   `@include vendor(border-radius, 4px);`
+ *
+ */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -396,13 +403,6 @@ td,
 th {
   padding: 0; }
 
-/**
- * FROM INUIT CSS
- * Create vendor-prefixed CSS in one go, e.g.
- *
-   `@include vendor(border-radius, 4px);`
- *
- */
 /*------------------------------------*\
     $RESET
 \*------------------------------------*/
@@ -551,6 +551,10 @@ $font-families: (
 /*  Set number of columns used in grid, smaller $grid-end = less lines of css.
     $grid-start should remain 1 in most cases. */
 /***
+    Z-INDEX
+    Documentation -> addons/zindex
+***/
+/***
     COMPONENTS
 ***/
 /***
@@ -576,6 +580,16 @@ $font-families: (
     Calculate baseline (= spacing unit for margins and paddings) from default
     font-size and default line-height
 */
+/***
+    CLEAR FIX
+
+    Clear floats for parent element
+***/
+.cf:after, .grid:after, .plain-text:after, .post-aside:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 @font-face {
   font-family: "Cooper Hewitt";
   src: url("../fonts/cooperhewitt/cooperhewitt-book-webfont.eot");
@@ -588,6 +602,109 @@ $font-families: (
   src: url("../fonts/cooperhewitt/cooperhewitt-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/cooperhewitt/cooperhewitt-bold-webfont.woff2") format("woff2"), url("../fonts/cooperhewitt/cooperhewitt-bold-webfont.woff") format("woff"), url("../fonts/cooperhewitt/cooperhewitt-bold-webfont.ttf") format("truetype"), url("../fonts/cooperhewitt/cooperhewitt-bold-webfont.svg#Cooper Hewitt") format("svg");
   font-weight: bold;
   font-style: normal; }
+/*
+    lists
+*/
+.list--reset {
+  list-style: none; }
+
+/*
+    Calculate header sizes and create classes similair to header tags.
+    EG
+    <h1> -> .h1
+*/
+/*  Calculate header font-size using $-fw-fontsize & $-fw-ratio,
+    also set default margin-bottom of al headers to $-fw-baseline (because it's
+    easy) */
+h6, .h6 {
+  font-size: 1.8rem;
+  margin-bottom: 2.1rem; }
+
+h5, .h5 {
+  font-size: 2.16rem;
+  margin-bottom: 2.1rem; }
+
+h4, .h4 {
+  font-size: 2.592rem;
+  margin-bottom: 2.1rem; }
+
+h3, .h3 {
+  font-size: 3.1104rem;
+  margin-bottom: 2.1rem; }
+
+h2, .h2 {
+  font-size: 3.73248rem;
+  margin-bottom: 2.1rem; }
+
+h1, .h1 {
+  font-size: 4.47898rem;
+  margin-bottom: 2.1rem; }
+
+/*
+    Get classnames for bigger than bodyfont based on metric
+    system, ascending: .deca, .hecto, .kilo, .mega, .giga, .tera.
+    Same size as headers but without standard margin.
+*/
+.deca {
+  font-size: 1.8rem; }
+
+.hecto {
+  font-size: 2.16rem; }
+
+.kilo, .article__subtitle {
+  font-size: 2.592rem; }
+
+.mega {
+  font-size: 3.1104rem; }
+
+.giga {
+  font-size: 3.73248rem; }
+
+.tera {
+  font-size: 4.47898rem; }
+
+/*
+    Get classnames for smaller than bodyfont based on metric
+    system, descending: .deci, .centi, .milli, .micro, .nano, .pico
+*/
+.deci, blockquote {
+  font-size: 1.25rem; }
+
+.centi, .tag-list, .date-list, .pullquote__cite {
+  font-size: 1.04167rem; }
+
+.milli {
+  font-size: 0.86806rem; }
+
+.micro {
+  font-size: 0.72338rem; }
+
+.nano {
+  font-size: 0.60282rem; }
+
+.pico {
+  font-size: 0.50235rem; }
+
+p {
+  margin-bottom: 2.1rem; }
+  p:last-child {
+    margin-bottom: 0; }
+
+/*
+* Drop cap
+*/
+.drop-cap > p:first-child:first-letter {
+  float: left;
+  line-height: 4.2rem;
+  font-size: 4.5rem;
+  margin-right: 2px; }
+
+/*
+* First line emphasis
+*/
+.first-line-em > p:first-child:first-line {
+  font-weight: bold; }
+
 /*------------------------------------*\
     $WIDTHS
 \*------------------------------------*/
@@ -1039,122 +1156,8 @@ $font-families: (
   .small-col-8of9 {
     width: 88.88889%; } }
 /*
-    Calculate header sizes and create classes similair to header tags.
-    EG
-    <h1> -> .h1
-*/
-/*  Calculate header font-size using $-fw-fontsize & $-fw-ratio,
-    also set default margin-bottom of al headers to $-fw-baseline (because it's
-    easy) */
-h6, .h6 {
-  font-size: 1.8rem;
-  margin-bottom: 2.1rem; }
-
-h5, .h5 {
-  font-size: 2.16rem;
-  margin-bottom: 2.1rem; }
-
-h4, .h4 {
-  font-size: 2.592rem;
-  margin-bottom: 2.1rem; }
-
-h3, .h3 {
-  font-size: 3.1104rem;
-  margin-bottom: 2.1rem; }
-
-h2, .h2 {
-  font-size: 3.73248rem;
-  margin-bottom: 2.1rem; }
-
-h1, .h1 {
-  font-size: 4.47898rem;
-  margin-bottom: 2.1rem; }
-
-/*
-    Get classnames for bigger than bodyfont based on metric
-    system, ascending: .deca, .hecto, .kilo, .mega, .giga, .tera.
-    Same size as headers but without standard margin.
-*/
-.deca {
-  font-size: 1.8rem; }
-
-.hecto {
-  font-size: 2.16rem; }
-
-.kilo, .article__subtitle {
-  font-size: 2.592rem; }
-
-.mega {
-  font-size: 3.1104rem; }
-
-.giga {
-  font-size: 3.73248rem; }
-
-.tera {
-  font-size: 4.47898rem; }
-
-/*
-    Get classnames for smaller than bodyfont based on metric
-    system, descending: .deci, .centi, .milli, .micro, .nano, .pico
-*/
-.deci {
-  font-size: 1.25rem; }
-
-.centi {
-  font-size: 1.04167rem; }
-
-.milli {
-  font-size: 0.86806rem; }
-
-.micro {
-  font-size: 0.72338rem; }
-
-.nano {
-  font-size: 0.60282rem; }
-
-.pico {
-  font-size: 0.50235rem; }
-
-p {
-  margin-bottom: 2.1rem; }
-  p:last-child {
-    margin-bottom: 0; }
-
-/*
-* Drop cap
-*/
-.drop-cap > p:first-child:first-letter {
-  float: left;
-  line-height: 4.2rem;
-  font-size: 4.5rem;
-  margin-right: 2px; }
-
-/*
-* First line emphasis
-*/
-.first-line-em > p:first-child:first-line {
-  font-weight: bold; }
-
-/***
-    CLEAR FIX
-
-    Clear floats for parent element
-***/
-.cf:after, .grid:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-/*
 *  z-index: z("modal");
 */
-.grid {
-  margin-left: -2.1rem; }
-
-.grid__cell {
-  float: left;
-  padding-left: 2.1rem; }
-
 /************
 
     BASELINEGRID
@@ -1166,6 +1169,13 @@ p {
     </div>
 
 ************/
+.grid {
+  margin-left: -2.1rem; }
+
+.grid__cell {
+  float: left;
+  padding-left: 2.1rem; }
+
 /*
 *   http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
 
@@ -1191,7 +1201,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Cooper Hewitt", verdana;
+  font-family: "Cooper Hewitt", arial, sans-serif;
   text-align: center;
   text-transform: uppercase; }
 
@@ -1202,9 +1212,8 @@ h6, .h6 {
 .article__subtitle,
 .hecto,
 .deca,
-.base,
-blockquote {
-  font-family: "Cooper Hewitt", verdana; }
+.base {
+  font-family: "Cooper Hewitt", arial, sans-serif; }
 
 h1, .h1, .tera {
   line-height: 8.4rem; }
@@ -1256,17 +1265,12 @@ h6, .h6, .deca {
   padding-right: 1.05rem;
   padding-left: 1.05rem;
   padding-bottom: 5px;
-  margin-top: -7px;
-  background: #26849e;
-  text-shadow: 1px 1px 0 #54bad6, 2px 2px 0 #4c4c4c; }
-
-.drop-cap--remove > p:first-child:first-letter {
-  padding-right: 0;
-  padding-left: 0;
-  padding-bottom: 0;
-  margin-top: 0;
-  background: none;
-  text-shadow: none; }
+  margin-top: -6px;
+  display: inline-block;
+  vertical-align: top;
+  color: #26849e;
+  background: #262626;
+  text-shadow: 0.1rem 0.1rem 0 #262626, 0.2rem 0.2rem 0 #1c6275; }
 
 .article__title {
   display: block; }
@@ -1284,39 +1288,50 @@ h6, .h6, .deca {
   margin-right: 2.1rem;
   text-align: right; }
 
-blockquote {
-  text-transform: uppercase;
-  text-align: center; }
-
-.blog-blockquote {
-  float: right;
-  padding: 2.1rem;
-  margin-right: -40%;
-  margin-bottom: 2.1rem;
-  margin-left: 2.1rem;
-  color: #b2b2b2;
-  background: #262626; }
+.post-aside__box {
+  margin-right: 2.1rem;
+  border-right: 1px solid rgba(38, 38, 38, 0.25); }
 
 .image--freeflow {
-  display: block;
-  width: 60vw;
-  margin-right: auto;
+  height: 100%;
+  width: 100%;
   margin-bottom: 2.1rem;
-  margin-left: auto; }
+  background-image: url("../images/layout/header-photo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center; }
+  .image--freeflow img {
+    display: inline-block; }
 
 .grid__cell {
   min-height: 100px; }
 
+.site-header {
+  height: 90vh;
+  background-image: url("../images/layout/header-photo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center; }
+
 body {
+  padding: 0;
+  font-family: "neuton", georgia, serif;
   font-size: 1.5rem;
   line-height: 2.1rem;
-  font-family: neuton, georgia, serif;
   color: #262626;
   background: #e5e5e5; }
 
+a {
+  text-decoration: none; }
+
 .l-wrapper {
+  z-index: 3;
   width: 80vw;
   margin: auto; }
+
+.l-wrapper--main {
+  position: relative;
+  z-index: 3; }
 
 .l-overlay-gfx {
   display: none;
@@ -1327,10 +1342,12 @@ body {
   pointer-events: none; }
   .l-overlay-gfx:before {
     content: "";
-    background-color: rgba(38, 132, 158, 0.8);
-    background-blend-mode: multiply;
     position: absolute;
+    left: 0;
+    z-index: 1;
     height: 80vw;
+    width: 300%;
+    background-color: rgba(38, 132, 158, 0.8);
     -webkit-transform-origin: 0% 0%;
     -moz-transform-origin: 0% 0%;
     -ms-transform-origin: 0% 0%;
@@ -1340,10 +1357,101 @@ body {
     -moz-transform: skewy(-60deg);
     -ms-transform: skewy(-60deg);
     -o-transform: skewy(-60deg);
-    transform: skewy(-60deg);
-    z-index: 1;
+    transform: skewy(-60deg); }
+
+.tag-list {
+  clear: both;
+  font-family: "Cooper Hewitt", arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem; }
+
+.tag-list__tag {
+  padding: 3px;
+  color: #e5e5e5;
+  background: #26849e; }
+
+.date-list {
+  float: right;
+  width: 8.4rem;
+  padding: 1.05rem;
+  margin-bottom: 2.1rem;
+  border-radius: 50%;
+  font-family: "Cooper Hewitt", arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: #e5e5e5;
+  background: #262626; }
+  .date-list li:last-child .date-list__item {
+    border-bottom: 0; }
+
+.date-list__item {
+  display: inline-block;
+  border-bottom: 1px solid #e5e5e5; }
+
+blockquote {
+  font-family: "Cooper Hewitt", arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center; }
+
+.pullquote {
+  position: relative;
+  float: right;
+  padding: 2.1rem;
+  margin-right: -40%;
+  margin-bottom: 2.1rem;
+  margin-left: 2.1rem;
+  color: #b2b2b2;
+  background: #262626; }
+  .pullquote:before, .pullquote:after {
+    position: absolute;
     left: 0;
-    width: 300%; }
+    right: 0;
+    font-size: 10rem;
+    font-weight: normal;
+    color: #26849e; }
+  .pullquote:before {
+    content: '\201C';
+    top: 2.3rem; }
+  .pullquote:after {
+    content: '\201D';
+    bottom: -4rem; }
+
+.pullquote__cite {
+  font-weight: normal;
+  font-style: normal; }
+  .pullquote__cite:before {
+    content: "~\00a0"; }
+
+.site-logo {
+  padding-top: 2.1rem;
+  padding-bottom: 2.1rem;
+  text-align: center;
+  background: rgba(229, 229, 229, 0.8); }
+
+.site-logo__logo {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding-left: 2.1rem;
+  padding-right: 2.1rem;
+  margin-bottom: 2.1rem; }
+  .site-logo__logo img {
+    width: 50vw; }
+
+.site-logo__slogan {
+  position: relative;
+  z-index: 3;
+  padding-left: 2.1rem;
+  padding-right: 2.1rem;
+  border-top: 1px solid #4c4c4c;
+  border-bottom: 1px solid #4c4c4c;
+  font-family: "Cooper Hewitt", arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
 
 body {
   /*

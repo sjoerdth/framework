@@ -1,13 +1,23 @@
 body {
+    padding: 0;
+    font-family: $body-stack;
     font-size: $-fw-fontsize;
     line-height: $-fw-baseline;
-    font-family: neuton, georgia, serif;
     color: palette(grey, x-dark);
     background: palette(grey, x-light);
 }
+a {
+    text-decoration: none;
+}
 .l-wrapper {
+    z-index: z(foreground);
     width: 80vw;
     margin: auto;
+}
+.l-wrapper--main {
+    position: relative;
+    z-index: 3;
+    //background: palette(green, x-light);
 }
 .l-overlay-gfx {
     display: none;
@@ -18,14 +28,13 @@ body {
     pointer-events: none;
     &:before {
         content: "";
-        background-color: rgba(palette(green), 0.8);
-        background-blend-mode: multiply;
         position: absolute;
+        left: 0;
+        z-index: z(gfx-overlay);
         height: 80vw;
+        width: 300%;
+        background-color: rgba(palette(green), 0.8);
         @include vendor(transform-origin, 0% 0%);
         @include vendor(transform, skewy(-60deg));
-        z-index: 1;
-        left: 0;
-        width: 300%;
     }
 }

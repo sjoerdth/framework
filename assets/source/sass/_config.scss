@@ -109,8 +109,13 @@ $font-families: (
 //$-fw-grid-start: 1;
 $-fw-grid-end: 9;
 
+/***
+    Z-INDEX
+    Documentation -> addons/zindex
+***/
 $z-layers--custom: (
-    gfx-overlay: 5500,
+    gfx-overlay: 1,
+    foreground: 3
 );
 
 /***

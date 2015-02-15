@@ -1,0 +1,37 @@
+.tag-list {
+    clear: both;
+    @extend .centi;
+    font-family: $header-stack;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+    .tag-list__tag {
+        padding: 3px;
+        color: palette(grey, x-light);
+        background: palette(green);
+    }
+.date-list {
+    float: right;
+    width: $-fw-baseline * 4;
+    padding: $-fw-baseline * 0.5;
+    margin-bottom: $-fw-baseline;
+    border-radius: 50%;
+    @extend .centi;
+    font-family: $header-stack;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    color: palette(grey, x-light);
+    background: palette(grey, x-dark);
+    li {
+        &:last-child {
+            .date-list__item {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+    .date-list__item {
+        display: inline-block;
+        border-bottom: 1px solid palette(grey, x-light);
+    }

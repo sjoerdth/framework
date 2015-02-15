@@ -1,7 +1,12 @@
 .image--freeflow {
-    display: block;
-    width: 60vw;
-    margin-right: auto;
+    height: 100%;
+    width: 100%;
     margin-bottom: $-fw-baseline;
-    margin-left: auto;
+    background-image: url("../images/layout/header-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    img {
+        display: inline-block;
+    }
 }

@@ -1,0 +1,42 @@
+blockquote {
+    @extend .deci;
+    font-family: $header-stack;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+.pullquote {
+    position: relative;
+    float: right;
+    padding: $-fw-baseline;
+    margin-right: -40%; // = 1 col width of the main grid
+    margin-bottom: $-fw-baseline;
+    margin-left: $-fw-baseline;
+    color:  palette(grey, light);
+    background: palette(grey, x-dark);
+    &:before,
+    &:after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        font-size: 10rem;
+        font-weight: normal;
+        color: palette(green);
+    }
+    &:before {
+        content: '\201C';
+        top: 2.3rem;
+    }
+    &:after {
+        content: '\201D';
+        bottom: -4rem;
+    }
+}
+.pullquote__cite {
+    @extend .centi;
+    font-weight: normal;
+    font-style: normal;
+    &:before {
+        content: "~\00a0";
+    }
+}

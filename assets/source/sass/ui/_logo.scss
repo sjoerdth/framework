@@ -1,0 +1,32 @@
+.site-logo {
+    padding-top: $-fw-baseline;
+    padding-bottom: $-fw-baseline;
+    text-align: center;
+    background: rgba(palette(grey, x-light), 0.8);
+}
+
+    .site-logo__logo {
+        position: relative;
+        z-index: z(foreground);
+        width: 100%;
+        padding-left: $-fw-baseline;
+        padding-right: $-fw-baseline;
+        margin-bottom: $-fw-baseline;
+        img {
+            width: 50vw;
+        }
+    }
+
+    .site-logo__slogan {
+        position: relative;
+        z-index: z(foreground);
+        padding-left: $-fw-baseline;
+        padding-right: $-fw-baseline;
+        border-top: 1px solid palette(grey, dark);
+        border-bottom: 1px solid palette(grey, dark);
+        font-family: $header-stack;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }

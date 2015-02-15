@@ -1,8 +1,13 @@
 .post-aside {
     position: absolute; top: 0;
     left: -40%; // = 2 col width of the main grid
+    @extend .cf;
 }
-.post-aside__push-in-grid {
-    margin-right: $-fw-baseline;
-    text-align: right;
-}
+    .post-aside__push-in-grid {
+        margin-right: $-fw-baseline;
+        text-align: right;
+    }
+    .post-aside__box {
+        margin-right: $-fw-baseline;
+        border-right: 1px solid rgba(palette(grey, x-dark), 0.25);
+    }

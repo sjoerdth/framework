@@ -1334,7 +1334,6 @@ a {
   z-index: 3; }
 
 .l-overlay-gfx {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;

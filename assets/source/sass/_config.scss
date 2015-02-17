@@ -12,8 +12,10 @@
 /* Set (body copy) font-size */
 $-fw-fontsize: 1.5rem;
 
+//$-fw-fontsize-h: 1rem;
+
 /* Set baseline (= $-fw-fontsize * $-fw-lineheight) height for vertical rhythm */
-//$-fw-lineheight: 1.6;
+//$-fw-lineheight: 1.4;
 
 /***
     TYPE SCALE
@@ -33,11 +35,7 @@ $-fw-fontsize: 1.5rem;
     $-fw-perfect-fifth: 1.5;
     $-fw-golden-ratio: 1.618;
 ***/
-$-fw-ratio: $-fw-minor-third;
-
-/*  Set max and min number of headers to be used in project (h1 through h6) */
-//$-fw-h-type--max: 1;
-//$-fw-h-type--min: 6;
+$-fw-ratio: $-fw-golden-ratio;
 
 /*
     Embed font-families

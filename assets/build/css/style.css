@@ -504,7 +504,6 @@ textarea:focus {
     $-fw-perfect-fifth: 1.5;
     $-fw-golden-ratio: 1.618;
 ***/
-/*  Set max and min number of headers to be used in project (h1 through h6) */
 /*
     Embed font-families
 
@@ -616,28 +615,28 @@ $font-families: (
 /*  Calculate header font-size using $-fw-fontsize & $-fw-ratio,
     also set default margin-bottom of al headers to $-fw-baseline (because it's
     easy) */
-h6, .h6 {
-  font-size: 1.8rem;
+h5, .h5 {
+  font-size: 0.92707rem;
   margin-bottom: 2.1rem; }
 
-h5, .h5 {
-  font-size: 2.16rem;
+h6, .h6 {
+  font-size: 0.57297rem;
   margin-bottom: 2.1rem; }
 
 h4, .h4 {
-  font-size: 2.592rem;
+  font-size: 1.5rem;
   margin-bottom: 2.1rem; }
 
 h3, .h3 {
-  font-size: 3.1104rem;
+  font-size: 2.427rem;
   margin-bottom: 2.1rem; }
 
 h2, .h2 {
-  font-size: 3.73248rem;
+  font-size: 3.92689rem;
   margin-bottom: 2.1rem; }
 
 h1, .h1 {
-  font-size: 4.47898rem;
+  font-size: 6.3537rem;
   margin-bottom: 2.1rem; }
 
 /*
@@ -645,45 +644,45 @@ h1, .h1 {
     system, ascending: .deca, .hecto, .kilo, .mega, .giga, .tera.
     Same size as headers but without standard margin.
 */
-.deca {
-  font-size: 1.8rem; }
+.deca, .article__subtitle {
+  font-size: 2.427rem; }
 
 .hecto {
-  font-size: 2.16rem; }
+  font-size: 3.92689rem; }
 
-.kilo, .article__subtitle {
-  font-size: 2.592rem; }
+.kilo {
+  font-size: 6.3537rem; }
 
 .mega {
-  font-size: 3.1104rem; }
+  font-size: 10.28029rem; }
 
 .giga {
-  font-size: 3.73248rem; }
+  font-size: 16.63351rem; }
 
 .tera {
-  font-size: 4.47898rem; }
+  font-size: 26.91302rem; }
 
 /*
     Get classnames for smaller than bodyfont based on metric
     system, descending: .deci, .centi, .milli, .micro, .nano, .pico
 */
-.deci, blockquote {
-  font-size: 1.25rem; }
+.deci, .tag-list, .date-list, .pullquote__cite {
+  font-size: 0.92707rem; }
 
-.centi, .tag-list, .date-list, .pullquote__cite {
-  font-size: 1.04167rem; }
+.centi {
+  font-size: 0.57297rem; }
 
 .milli {
-  font-size: 0.86806rem; }
+  font-size: 0.35412rem; }
 
 .micro {
-  font-size: 0.72338rem; }
+  font-size: 0.21887rem; }
 
 .nano {
-  font-size: 0.60282rem; }
+  font-size: 0.13527rem; }
 
 .pico {
-  font-size: 0.50235rem; }
+  font-size: 0.0836rem; }
 
 p {
   margin-bottom: 2.1rem; }
@@ -1209,9 +1208,9 @@ h6, .h6 {
 .giga,
 .mega,
 .kilo,
-.article__subtitle,
 .hecto,
 .deca,
+.article__subtitle,
 .base {
   font-family: "Cooper Hewitt", arial, sans-serif; }
 
@@ -1240,13 +1239,13 @@ h2 {
 h3, .h3, .mega {
   line-height: 4.2rem; }
 
-h4, .h4, .kilo, .article__subtitle {
+h4, .h4, .kilo {
   line-height: 3.15rem; }
 
 h5, .h5, .hecto {
   line-height: 4.2rem; }
 
-h6, .h6, .deca {
+h6, .h6, .deca, .article__subtitle {
   line-height: 3.15rem; }
 
 /*

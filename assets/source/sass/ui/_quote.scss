@@ -1,5 +1,4 @@
 blockquote {
-    @extend .deci;
     font-family: $header-stack;
     font-weight: bold;
     text-transform: uppercase;
@@ -33,7 +32,7 @@ blockquote {
     }
 }
 .pullquote__cite {
-    @extend .centi;
+    @extend .deci;
     font-weight: normal;
     font-style: normal;
     &:before {

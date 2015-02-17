@@ -15,6 +15,9 @@
     Set default font-size
 */
 $-fw-fontsize: 1rem !default;
+
+$-fw-fontsize-h: $-fw-fontsize !default;
+
 /*
     Set default line-height
 */

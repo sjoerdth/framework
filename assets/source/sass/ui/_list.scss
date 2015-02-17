@@ -1,6 +1,6 @@
 .tag-list {
     clear: both;
-    @extend .centi;
+    @extend .deci;
     font-family: $header-stack;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -16,7 +16,7 @@
     padding: $-fw-baseline * 0.5;
     margin-bottom: $-fw-baseline;
     border-radius: 50%;
-    @extend .centi;
+    @extend .deci;
     font-family: $header-stack;
     text-transform: uppercase;
     letter-spacing: 0.1rem;

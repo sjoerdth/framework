@@ -10,14 +10,32 @@
 
 $-fw-ratio--exp: $-fw-ratio;
 
-@for $i from $-fw-h-type--min through $-fw-h-type--max {
+// Set unit for calculating  h1 / h3
+$font-size-inc: $-fw-ratio;
 
+// Set unit for calculating  h5 / h6
+$font-size-dec: $-fw-ratio;
+
+@for $i from 1 through 6 {
+  @if $i >= 4  { // 6, 5, 4 (h1 h2 h3)
     h#{7 - $i}, .h#{7 - $i} {
-        font-size: $-fw-fontsize * $-fw-ratio--exp;
+        font-size: $-fw-fontsize-h * $font-size-inc;
         margin-bottom: $-fw-baseline;
     }
-    $-fw-ratio--exp: $-fw-ratio--exp * $-fw-ratio;
-}
+    $font-size-inc: $font-size-inc * $-fw-ratio;
+  } @else if $i == 3 { // 3 (h4)
+    h#{7 - $i}, .h#{7 - $i} {
+        font-size: $-fw-fontsize-h;
+        margin-bottom: $-fw-baseline;
+    }
+  } @else if $i <= 2 { // 2, 1 (h5 h6)
+    h#{4 + $i}, .h#{4 + $i} {
+        font-size: $-fw-fontsize-h / $font-size-dec;
+        margin-bottom: $-fw-baseline;
+    }
+    $font-size-dec: $font-size-dec * $-fw-ratio;
+  }
+};
 /*
     Get classnames for bigger than bodyfont based on metric
     system, ascending: .deca, .hecto, .kilo, .mega, .giga, .tera.

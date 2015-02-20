@@ -1,8 +1,7 @@
 /*
 *  z-index: z("modal");
 */
-
-$z-layers--fw: (
+$z-layers: (
   "modal"   :           10000,
   "notice"  :           9000,
   "overlay" :           7000,
@@ -10,7 +9,10 @@ $z-layers--fw: (
   "below"   :           5000
 );
 
-$z-layers: map-merge($z-layers--fw, $z-layers--custom);
+//  Check if customs z-index's are added
+@if $-fw-use-custom-zindex == true {
+    $z-layers: map-merge($z-layers, $z-layers--custom);
+};
 
 @function z($layer) {
   @if not map-has-key($z-layers, $layer) {

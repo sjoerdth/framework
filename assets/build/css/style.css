@@ -1,4 +1,109 @@
 @charset "UTF-8";
+/***
+
+    Uncomment and change value to overwrite default values
+
+***/
+/***
+    [#BASELINE]
+    Documentation -> addon/baseline
+***/
+/* Set (body copy) font-size */
+/* Set baseline (= $-fw-fontsize * $-fw-lineheight) height for vertical rhythm */
+/***
+    [#BREAKPOINTS]
+***/
+/*
+    Change breakpoints -> or / and
+*/
+/*
+    -> Set array containing all breakpoints in descending order, these will be used
+    to create the media-queries to set the width of your grid columns.
+
+    $-fw-breakpoints: (
+        classname: breakpoint,
+    );
+*/
+/*
+$-fw-breakpoints: (
+    large: $-fw-breakpoint__large,
+    medium: $-fw-breakpoint__medium,
+    small: $-fw-breakpoint__small
+);
+*/
+/***
+    [#COMPONENTS]
+***/
+/*
+    Embed font-families
+
+$path: ../fonts/;
+$font-families: (
+  arial__normal: (
+    style-name: arial__style,
+    path: $path,
+    folder: arial,
+    file-name: arial__file--normal,
+    font-weight: normal,
+    font-style: normal
+  ),
+  arial__bold: (
+    style-name: arial__style,
+    path: $path,
+    folder: arial,
+    file-name: arial__file--bold,
+    font-weight: bold,
+    font-style: normal
+  ),
+  arial__italic: (
+    style-name: arial__style,
+    path: $path,
+    folder: arial,
+    file-name: arial__file--italic,
+    font-weight: normal,
+    font-style: italic
+  ),
+  georgia__italic: (
+    style-name: georgia__style,
+    path: $path,
+    folder: georgia,
+    file-name: georgia__file--italic,
+    font-weight: normal,
+    font-style: italic
+  )
+);
+*/
+/***
+    [#GRID]
+    Documentation -> components/grid
+
+    Set number of columns used in grid, smaller $grid-end = less lines of css.
+    $grid-start should remain 1 in most cases.
+***/
+/***
+    [#TYPE SCALE]
+    Documentation -> addon/typography
+
+    Set exponential growth / shrinkage of <h1> & .h1 through <h6> & .h6
+    and
+    growth of: .deca, .hecto, .kilo, .mega, .giga, .tera.
+    and
+    shrinkage of: .deci, .centi, .milli, .micro, .nano, .pico
+
+    Suggested values:
+    minor-second: 1.067;
+    major-second: 1.125;
+    minor-third: 1.2;
+    major-third: 1.25;
+    perfect-fourth: 1.333;
+    augmented-fourth: 1.414;
+    perfect-fifth: 1.5;
+    golden-ratio: 1.618;
+***/
+/***
+    [#Z-INDEX]
+    Documentation -> addons/zindex
+***/
 /*------------------------------------*\
     DEFAULTS
 \*------------------------------------*/
@@ -17,9 +122,6 @@
 /*
     Set default ratio used throughout project
 */
-/*
-    Set max and min number of headers to be used in project (h1 through h6)
-*/
 /***
     GRID
 ***/
@@ -37,6 +139,12 @@
 /***
     COMPONENTS
 ***/
+/***
+    @font-face
+***/
+/***
+    CUSTOM Z-INDEX
+***/
 /**
  * FROM INUIT CSS
  * Create vendor-prefixed CSS in one go, e.g.
@@ -44,6 +152,24 @@
    `@include vendor(border-radius, 4px);`
  *
  */
+/***
+    MEDIA QUERY
+
+    min-width and max-width:
+    @include media($-fw-breakpoint__small, $-fw-breakpoint__large) {
+      color: red;
+    }
+
+    min-width
+    @include media($-fw-breakpoint__small, null) {
+      color: red;
+    }
+
+    max-width
+    @include media(null, $-fw-breakpoint__large) {
+      color: red;
+    }
+***/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -476,87 +602,6 @@ textarea:focus {
   outline: none; }
 
 /***
-
-    Uncomment and change value to overwrite default values
-
-***/
-/***
-    BASELINE
-    Documentation -> addon/baseline
-***/
-/* Set (body copy) font-size */
-/* Set baseline (= $-fw-fontsize * $-fw-lineheight) height for vertical rhythm */
-/***
-    TYPE SCALE
-    Documentation -> addon/typography
-
-    Set exponential growth of <h1> & .h1 through <h6> & .h6, when you
-    increase this value line-height for these elements should possibly also be
-    increased and vice versa.
-
-    Values:
-    $-fw-minor-second: 1.067;
-    $-fw-major-second: 1.125;
-    $-fw-minor-third: 1.2;
-    $-fw-major-third: 1.25;
-    $-fw-perfect-fourth: 1.333;
-    $-fw-augmented-fourth: 1.414;
-    $-fw-perfect-fifth: 1.5;
-    $-fw-golden-ratio: 1.618;
-***/
-/*
-    Embed font-families
-
-$path: ../fonts/;
-$font-families: (
-  arial__normal: (
-    style-name: arial__style,
-    path: $path,
-    folder: arial,
-    file-name: arial__file--normal,
-    font-weight: normal,
-    font-style: normal
-  ),
-  arial__bold: (
-    style-name: arial__style,
-    path: $path,
-    folder: arial,
-    file-name: arial__file--bold,
-    font-weight: bold,
-    font-style: normal
-  ),
-  arial__italic: (
-    style-name: arial__style,
-    path: $path,
-    folder: arial,
-    file-name: arial__file--italic,
-    font-weight: normal,
-    font-style: italic
-  ),
-  georgia__italic: (
-    style-name: georgia__style,
-    path: $path,
-    folder: georgia,
-    file-name: georgia__file--italic,
-    font-weight: normal,
-    font-style: italic
-  )
-);
-*/
-/***
-    GRID
-    Documentation -> components/grid
-***/
-/*  Set number of columns used in grid, smaller $grid-end = less lines of css.
-    $grid-start should remain 1 in most cases. */
-/***
-    Z-INDEX
-    Documentation -> addons/zindex
-***/
-/***
-    COMPONENTS
-***/
-/***
     BASELINE
 
     Setup baseline and spacing units for vertical & horizontal rhythm.
@@ -589,18 +634,6 @@ $font-families: (
   display: table;
   clear: both; }
 
-@font-face {
-  font-family: "Cooper Hewitt";
-  src: url("../fonts/cooperhewitt/cooperhewitt-book-webfont.eot");
-  src: url("../fonts/cooperhewitt/cooperhewitt-book-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/cooperhewitt/cooperhewitt-book-webfont.woff2") format("woff2"), url("../fonts/cooperhewitt/cooperhewitt-book-webfont.woff") format("woff"), url("../fonts/cooperhewitt/cooperhewitt-book-webfont.ttf") format("truetype"), url("../fonts/cooperhewitt/cooperhewitt-book-webfont.svg#Cooper Hewitt") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: "Cooper Hewitt";
-  src: url("../fonts/cooperhewitt/cooperhewitt-bold-webfont.eot");
-  src: url("../fonts/cooperhewitt/cooperhewitt-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/cooperhewitt/cooperhewitt-bold-webfont.woff2") format("woff2"), url("../fonts/cooperhewitt/cooperhewitt-bold-webfont.woff") format("woff"), url("../fonts/cooperhewitt/cooperhewitt-bold-webfont.ttf") format("truetype"), url("../fonts/cooperhewitt/cooperhewitt-bold-webfont.svg#Cooper Hewitt") format("svg");
-  font-weight: bold;
-  font-style: normal; }
 /*
     lists
 */
@@ -642,7 +675,6 @@ h1, .h1 {
 /*
     Get classnames for bigger than bodyfont based on metric
     system, ascending: .deca, .hecto, .kilo, .mega, .giga, .tera.
-    Same size as headers but without standard margin.
 */
 .deca, .article__subtitle {
   font-size: 2.427rem; }
@@ -684,13 +716,16 @@ h1, .h1 {
 .pico {
   font-size: 0.0836rem; }
 
+/*
+    Remove padding from all <p> that are last child
+*/
 p {
   margin-bottom: 2.1rem; }
   p:last-child {
     margin-bottom: 0; }
 
 /*
-* Drop cap
+    Drop cap
 */
 .drop-cap > p:first-child:first-letter {
   float: left;
@@ -1319,6 +1354,9 @@ body {
   line-height: 2.1rem;
   color: #262626;
   background: #e5e5e5; }
+  @media only screen and (min-width: 30em) and (max-width: 50em) {
+    body {
+      background: red; } }
 
 a {
   text-decoration: none; }

@@ -12,3 +12,37 @@
          -o-#{$property}:$value;
             #{$property}:$value;
 }
+
+/***
+    MEDIA QUERY
+
+    min-width and max-width:
+    @include media($-fw-breakpoint__small, $-fw-breakpoint__large) {
+      color: red;
+    }
+
+    min-width
+    @include media($-fw-breakpoint__small, null) {
+      color: red;
+    }
+
+    max-width
+    @include media(null, $-fw-breakpoint__large) {
+      color: red;
+    }
+***/
+@mixin media($min: null, $max: null){
+    @if $min != null and $max != null {
+        @media only screen and (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    } @else if  $min == null and $max != null {
+        @media only screen and (max-width: $max) {
+            @content;
+        }
+    } @else if  $min != null and $max == null {
+        @media only screen and (min-width: $min) {
+            @content;
+        }
+    }
+};

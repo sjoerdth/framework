@@ -5,6 +5,9 @@ body {
     line-height: $-fw-baseline;
     color: palette(grey, x-dark);
     background: palette(grey, x-light);
+    @include media($-fw-breakpoint__small, $-fw-breakpoint__medium) {
+        background: red;
+    }
 }
 a {
     text-decoration: none;

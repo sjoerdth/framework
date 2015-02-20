@@ -1,0 +1,61 @@
+/*
+    Embed font-families
+
+$path: ../fonts/;
+$font-families: (
+  arial__normal: (
+    style-name: arial__style,
+    path: $path,
+    folder: arial,
+    file-name: arial__file--normal,
+    font-weight: normal,
+    font-style: normal
+  ),
+  arial__bold: (
+    style-name: arial__style,
+    path: $path,
+    folder: arial,
+    file-name: arial__file--bold,
+    font-weight: bold,
+    font-style: normal
+  ),
+  arial__italic: (
+    style-name: arial__style,
+    path: $path,
+    folder: arial,
+    file-name: arial__file--italic,
+    font-weight: normal,
+    font-style: italic
+  ),
+  georgia__italic: (
+    style-name: georgia__style,
+    path: $path,
+    folder: georgia,
+    file-name: georgia__file--italic,
+    font-weight: normal,
+    font-style: italic
+  )
+);
+*/
+$use-font-face: true;
+
+$path: "../fonts";
+
+$font-families: (
+    cooperhewittbook__normal: (
+        style-name: "Cooper Hewitt",
+        path: $path,
+        folder: "cooperhewitt",
+        file-name: "cooperhewitt-book-webfont",
+        font-weight: normal,
+        font-style: normal
+    ),
+    cooperhewittbook__bold: (
+        style-name: "Cooper Hewitt",
+        path: $path,
+        folder: "cooperhewitt",
+        file-name: "cooperhewitt-bold-webfont",
+        font-weight: bold,
+        font-style: normal
+    )
+);

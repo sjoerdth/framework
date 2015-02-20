@@ -1,0 +1,25 @@
+/***
+    [#BREAKPOINTS]
+***/
+/*
+    Change breakpoints -> or / and
+*/
+//$-fw-breakpoint__large:     68.750em; // Small desktop to large desktop
+//$-fw-breakpoint__medium:    50em; // Portrait tablet to landscape tablet
+//$-fw-breakpoint__small:     30em; // Portrait mobile to landscape mobile
+
+/*
+    -> Set array containing all breakpoints in descending order, these will be used
+    to create the media-queries to set the width of your grid columns.
+
+    $-fw-breakpoints: (
+        classname: breakpoint,
+    );
+*/
+/*
+$-fw-breakpoints: (
+    large: $-fw-breakpoint__large,
+    medium: $-fw-breakpoint__medium,
+    small: $-fw-breakpoint__small
+);
+*/

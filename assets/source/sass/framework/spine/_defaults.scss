@@ -28,28 +28,6 @@ $-fw-golden-ratio       : 1.618 !default;
 */
 $-fw-ratio: $-fw-major-third !default;
 
-/*
-    Set max and min number of headers to be used in project (h1 through h6)
-*/
-
-$-fw-fontsize__big: (
-    deca,
-    hecto,
-    kilo,
-    mega,
-    giga,
-    tera
-);
-
-$-fw-fontsize__small: (
-    deci,
-    centi,
-    milli,
-    micro,
-    nano,
-    pico
-);
-
 /***
     GRID
 ***/
@@ -70,17 +48,11 @@ $-fw-breakpoint__small:     30em !default; // Portrait mobile to landscape mobil
     Set array containing all breakpoints in descending order, these will be used
     to create the media-queries to set the width of your grid columns.
 */
-$-fw-breakpoint__sizes: (
-    ($-fw-breakpoint__large, large),
-    ($-fw-breakpoint__medium, medium),
-    ($-fw-breakpoint__small, small)
-);
-
 $-fw-breakpoints: (
     large: $-fw-breakpoint__large,
     medium: $-fw-breakpoint__medium,
     small: $-fw-breakpoint__small
-);
+) !default;
 
 /***
     COMPONENTS
@@ -88,3 +60,13 @@ $-fw-breakpoints: (
 $-fw-use-baseline-grid      : false !default;
 $-fw-use-grid               : false !default;
 $-fw-use-grid--responsive   : false !default;
+
+/***
+    @font-face
+***/
+$-fw-use-font-face: false !default;
+
+/***
+    CUSTOM Z-INDEX
+***/
+$-fw-use-custom-zindex: false !default;

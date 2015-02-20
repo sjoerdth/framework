@@ -1,11 +1,18 @@
 @charset "UTF-8";
 
+@import "config";
+
+@import "framework/config/breakpoints";
+@import "framework/config/components";
+@import "framework/config/fonts";
+@import "framework/config/gridwidths";
+@import "framework/config/typescale";
+@import "framework/config/zindex";
+
 @import "framework/spine/defaults";
 @import "framework/spine/mixins";
 @import "framework/spine/normalize";
 @import "framework/spine/reset";
-
-@import "config";
 
 @import "framework/addons/baseline";
 @import "framework/addons/cf";

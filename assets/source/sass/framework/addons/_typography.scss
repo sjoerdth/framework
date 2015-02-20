@@ -36,11 +36,21 @@ $font-size-dec: $-fw-ratio;
     $font-size-dec: $font-size-dec * $-fw-ratio;
   }
 };
+
 /*
     Get classnames for bigger than bodyfont based on metric
     system, ascending: .deca, .hecto, .kilo, .mega, .giga, .tera.
-    Same size as headers but without standard margin.
 */
+
+$-fw-fontsize__big: (
+    deca,
+    hecto,
+    kilo,
+    mega,
+    giga,
+    tera
+);
+
 $-fw-ratio--exp: $-fw-ratio;
 @for $i from 1 through length($-fw-fontsize__big) {
 
@@ -56,6 +66,16 @@ $-fw-ratio--exp: $-fw-ratio;
     Get classnames for smaller than bodyfont based on metric
     system, descending: .deci, .centi, .milli, .micro, .nano, .pico
 */
+
+$-fw-fontsize__small: (
+    deci,
+    centi,
+    milli,
+    micro,
+    nano,
+    pico
+);
+
 $-fw-ratio--exp: $-fw-ratio;
 @for $i from 1 through length($-fw-fontsize__small) {
 
@@ -66,7 +86,9 @@ $-fw-ratio--exp: $-fw-ratio;
     }
     $-fw-ratio--exp: $-fw-ratio--exp * $-fw-ratio;
 }
-
+/*
+    Remove padding from all <p> that are last child
+*/
 p {
     margin-bottom: $-fw-baseline;
     &:last-child {
@@ -75,7 +97,7 @@ p {
 }
 
 /*
-* Drop cap
+    Drop cap
 */
 .drop-cap {
     >p:first-child {

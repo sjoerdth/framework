@@ -5,7 +5,7 @@
 ***/
 
 /***
-    BASELINE
+    [#BASELINE]
     Documentation -> addon/baseline
 ***/
 
@@ -16,109 +16,3 @@ $-fw-fontsize: 1.5rem;
 
 /* Set baseline (= $-fw-fontsize * $-fw-lineheight) height for vertical rhythm */
 //$-fw-lineheight: 1.4;
-
-/***
-    TYPE SCALE
-    Documentation -> addon/typography
-
-    Set exponential growth of <h1> & .h1 through <h6> & .h6, when you
-    increase this value line-height for these elements should possibly also be
-    increased and vice versa.
-
-    Values:
-    $-fw-minor-second: 1.067;
-    $-fw-major-second: 1.125;
-    $-fw-minor-third: 1.2;
-    $-fw-major-third: 1.25;
-    $-fw-perfect-fourth: 1.333;
-    $-fw-augmented-fourth: 1.414;
-    $-fw-perfect-fifth: 1.5;
-    $-fw-golden-ratio: 1.618;
-***/
-$-fw-ratio: $-fw-golden-ratio;
-
-/*
-    Embed font-families
-
-$path: ../fonts/;
-$font-families: (
-  arial__normal: (
-    style-name: arial__style,
-    path: $path,
-    folder: arial,
-    file-name: arial__file--normal,
-    font-weight: normal,
-    font-style: normal
-  ),
-  arial__bold: (
-    style-name: arial__style,
-    path: $path,
-    folder: arial,
-    file-name: arial__file--bold,
-    font-weight: bold,
-    font-style: normal
-  ),
-  arial__italic: (
-    style-name: arial__style,
-    path: $path,
-    folder: arial,
-    file-name: arial__file--italic,
-    font-weight: normal,
-    font-style: italic
-  ),
-  georgia__italic: (
-    style-name: georgia__style,
-    path: $path,
-    folder: georgia,
-    file-name: georgia__file--italic,
-    font-weight: normal,
-    font-style: italic
-  )
-);
-*/
-
-$path: "../fonts";
-
-$font-families: (
-    cooperhewittbook__normal: (
-        style-name: "Cooper Hewitt",
-        path: $path,
-        folder: "cooperhewitt",
-        file-name: "cooperhewitt-book-webfont",
-        font-weight: normal,
-        font-style: normal
-    ),
-    cooperhewittbook__bold: (
-        style-name: "Cooper Hewitt",
-        path: $path,
-        folder: "cooperhewitt",
-        file-name: "cooperhewitt-bold-webfont",
-        font-weight: bold,
-        font-style: normal
-    )
-);
-
-/***
-    GRID
-    Documentation -> components/grid
-***/
-/*  Set number of columns used in grid, smaller $grid-end = less lines of css.
-    $grid-start should remain 1 in most cases. */
-//$-fw-grid-start: 1;
-$-fw-grid-end: 9;
-
-/***
-    Z-INDEX
-    Documentation -> addons/zindex
-***/
-$z-layers--custom: (
-    gfx-overlay: 1,
-    foreground: 3
-);
-
-/***
-    COMPONENTS
-***/
-$-fw-use-baseline-grid      : false;
-$-fw-use-grid               : true;
-$-fw-use-grid--responsive   : true;
